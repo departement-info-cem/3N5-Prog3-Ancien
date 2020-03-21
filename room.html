@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+        <title>BD / Room</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand fixed-top navbar-light bg-dark" >
+            <div class="container">
+                <a class="navbar-brand text-light" href="#">Apps Orientées Objet</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="theCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a class="btn btn-outline-light ml-1" role="button" href="index.html" ><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <h3>Android : persister des données avec Room / SQLite</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 alert alert-success">
+                    <strong>Avant la séance (2h)</strong>
+                    <p>
+                        Regarder la page sur les différentes options de persistence
+                        <a 
+                           class="btn btn-xs btn-primary"
+                           href="https://developer.android.com/guide/topics/data/data-storage.html">ici</a>
+                    </p>
+                    <p>
+                        Nous utiliserons la librairie Room pour faciliter l'utilisation de SQLite.
+                    </p>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XMN3y8d2Dr0?rel=0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <a href="https://github.com/jorisdeguet/RoomSQL/tree/RoomBase">
+                        Code après video 1
+                    </a>
+                    
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/t8O7EN61egA?rel=0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <a href="https://github.com/jorisdeguet/RoomSQL/tree/RoomDebug">
+                        Code après video 2
+                    </a>
+                    
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SB58qEx9XBU?rel=0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <a href="https://github.com/jorisdeguet/RoomSQL/tree/RoomTransaction">
+                        Code après video 3
+                    </a>
+                    
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fpdADjOecTw?rel=0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <a href="https://github.com/jorisdeguet/RoomSQL/tree/RoomPerformance">
+                        Code après video 4
+                    </a>
+                    <p>
+                        <span class="badge badge-warning" >Optionnel: </span>
+                        vous trouverez un projet illustrant les différentes possibilités de stockage <a href="https://github.com/jorisdeguet/420406-Applications/tree/master/code/Persist" class="btn btn-xs btn-primary">ici</a>.
+                    </p>
+                    <p>
+                        Ensuite vous devez commencer les exercices . Arrêtez vous quand vous avez complété vos 2 heures.
+                    </p>
+                </div>
+                <div class="col-md-3 alert  alert-warning">
+                    <strong>Cours à 40</strong> 
+                    <p>
+                        Nous ferons quelques exemples pour revenir sur le code fourni.     
+                    </p>
+                    <p>
+                        Nous discuterons des différentes options de stockage (support, granularité) et des critères à considérer pour choisir ce qui est le plus approprié pour une application donnée.
+                    </p>
+                </div>
+                <div class="col-md-3 alert alert-info">
+                    <strong>Labo à 20</strong> 
+                    <p>
+                        Compléter les exercices de la semaine.
+                        Continuer le travail évalué en cours.
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <div>
+                        <h2><span class="btn btn-dark btn-lg btn-block mt-5">Exercices de la semaine</span></h2>
+                        <div>
+                            <h3>Exercice StockageDernierArret</h3>
+                            <p>
+                                Dans un nouveau projet, tu programmes la persistance suivante.
+                            </p>
+                            <ul>
+                                <li>Une seule activité</li>
+                                <li>À la fermeture de l'activité (événement onPause? onStop? onDestroy? <a href="https://developer.android.com/reference/android/app/Activity.html" target="_blank">ici</a>), 
+                                    l'activité sauvegarde sur l'appareil l'heure de l'arrêt.
+                                </li>
+                                <li>
+                                    Au démarrage de l'activité, on affiche dans un TextView l'heure du dernier arrêt de l'application. Au premier démarrage de l'application, on n'affiche rien mais on fait apparaître un Toast indiquant un tout premier démarrage. (tu peux supprimer l'application du périphérique pour pratiquer le premier démarrage)
+                                </li>
+                            </ul>
+                            
+                            <h3>Exercice Persist</h3>
+                            <p>
+                                Créer une classe entité Personne à persister avec Room avec les champs suivants:
+                            </p>
+                            <ul>
+                                <li>nom de type String</li>
+                                <li>dateNaissance de type DateTime (<a href="https://www.joda.org/joda-time/quickstart.html">ici</a>)</li>
+                                <li>sexe d'un type énuméré Sexe avec comme valeurs possibles Homme, Femme et Complexe</li>
+                            </ul>
+                            <p>
+                                Programmer le nécessaire pour avoir les opérations suivantes possibles:
+                            </p>
+                            <ul>
+                                <li>sauver une personne</li>
+                                <li>récupérer les personnes d'un sexe fourni en paramètre</li>
+                                <li>récupérer toutes les personnes</li>
+                            </ul>
+                            <p>
+                                Illustrer le fonctionnement de ton code avec des tests unitaires utilisant une base de données en mémoire vive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>
