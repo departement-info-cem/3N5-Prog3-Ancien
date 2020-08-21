@@ -59,13 +59,13 @@
                 <strong>Format de Projet</strong>
                 <span class="label label-warning">Remplacer Dupont par <em>TON</em> nom de famille</span>
                 <p>
-                    Le projet s'appelle <em>BottyBot</em>. Vous devez créer un repository GitHub pour votre code.
+                    Le projet s'appelle <em>BottyBot</em>. Tu dois créer un repository GitHub privé pour ton code.
                 </p>
                 <div>
-                    <span class="label label-success">1 point</span> Le nom du repo est <em>A20-4203N5-BottyBot-Dupont</em> sur github. (Instructions <a href="git.html">ici</a>) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
+                    <span class="label label-success">1 point</span> Le nom du repo est <em>A20-4203N5-BottyBot-Dupont</em> (remplace Dupont par ton nom de famille) sur github. (Instructions <a href="git.html">ici</a>) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
                 </div>
                 <div>
-                    <span class="label label-success">2 points</span> Un minimum de 10 commits sur l'avancement du projet dans un français correct. Les descriptions doivent exister et correspondre aux modifications du commit.
+                    <span class="label label-success">3 points</span> Un minimum de 10 commits de taille comparable (il n'y a pas un commit avec tout dedans et les autres vides) sur l'avancement du projet dans un français correct. Les descriptions doivent exister et correspondre aux modifications du commit.
                 </div>
                 <div>
                     <span class="label label-success">0,5 point</span> La classe principale de l'application doit s'appeler <em>DupontBot.java</em>
@@ -79,9 +79,13 @@
                 <p>
                     L'ensemble de la correction est effectuée sur le  
                     <a class="btn btn-danger btn-xs" href="./testbot/">site de correction</a>. 
-                    Vous pouvez tester votre bot sur d'autres sites mais ça n'aura pas d'impact sur la correction.
-                    Vous trouverez une video de correction <a class="btn btn-danger btn-xs" href="https://www.youtube.com/watch?v=dAPT2C_bb1Y">ici</a>
-                    Vous trouverez une liste de photos des résultats attendus <a class="btn btn-danger btn-xs" target="_blank" href="./docs/Projet1_ResultatsAttendus.pdf">ici</a>
+                    Tu peux tester ton bot sur d'autres sites mais ça n'aura pas d'impact sur la correction.
+                </p>    
+                <p>
+                    Tu as une video de correction <a class="btn btn-danger btn-xs" href="https://www.youtube.com/watch?v=dAPT2C_bb1Y">ici</a>
+                </p>
+                <p>
+                    Tu as aussi une liste de photos des résultats attendus <a class="btn btn-danger btn-xs" target="_blank" href="./docs/Projet1_ResultatsAttendus.pdf">ici</a>
                 </p>
             </div>
         </div>
@@ -92,27 +96,27 @@
                 </h3>
                 <h4>Arguments en ligne de commandes</h4>
                 <p>
-                    Votre application doit prendre 3 arguments en ligne de commande dans l'ordre spécifié ici.
+                    Ton application doit prendre 3 arguments en ligne de commande dans l'ordre spécifié ici.
                 </p>
                 <div class="alert alert-danger" role="alert">
-                    <strong>Attention!</strong> Il ne s'agit pas d'une application intéractive. Vous devez passer les paramètres en ligne de commandes. Il est fortement recommander de créer plusieurs configurations d'exécution dans Intellij IDEA pour tester plusieurs combinaisons de paramètres corrects ou incorrects.
+                    <strong>Attention!</strong> Il ne s'agit pas d'une application intéractive. Tu dois passer les paramètres en ligne de commandes. Il est fortement recommandé de créer plusieurs configurations d'exécution dans Intellij IDEA pour tester plusieurs combinaisons de paramètres corrects ou incorrects.
                 </div>
                 <p>
-                    <span class="label label-success">1 point</span> Dans le cas où l'utilisateur ne fournit pas le bon nombre d'arguments vous devez lui indiquer clairement comment utiliser votre application.
+                    <span class="label label-success">1 point</span> Dans le cas où l'utilisateur ne fournit pas le bon nombre d'arguments tu dois lui indiquer clairement comment utiliser l'application.
                 </p>
                 <ul>
                     <li>combien d'arguments</li>
                     <li>quel est le rôle de chacun</li>
                     <li>un exemple d'utilisation</li>
                 </ul>
-                Les paramètres sont:
+                Les arguments sont:
                 <ol>
                     <li><span class="label label-success">2 points</span> la profondeur d'exploration qui doit être un nombre entier positif.</li>
                     <li><span class="label label-success">2 points</span> l'url de départ qui est la première page à explorer. Il doit s'agir d'une adresse valide (le format est correct et il y a une page qui y correspond).</li>
                     <li><span class="label label-success">2 points</span> le répertoire où écrire les copies locales des fichiers explorés. Le dossier doit être accessible et on doit pouvoir y écrire.</li>
                 </ol>
                 <p>
-                    Pour chaque arguement, vous obtenez un point s'il est bien pris en compte et un point si vous affichez un message significatif quand la valeur n'est pas bonne.
+                    Pour chaque argument, tu obtiens un point s'il est bien pris en compte et un point si tu affiches un message significatif quand la valeur n'est pas bonne ou absente.
                 </p>
             </div>
 
@@ -134,21 +138,21 @@
 
                 <h4>Mémoire de l'exploration</h4>
                 <p>
-                    <span class="label label-success">2 points</span> Vous devez implanter un mécanisme pour ne pas visiter plus d'une fois la même page.
+                    <span class="label label-success">2 points</span> Tu dois implanter un mécanisme pour ne pas visiter plus d'une fois la même page.
                     Si une page A contient un lien vers B qui contient un lien vers A, on ne devrait pas
                     re-explorer la page A.
                 </p>
                 <p>
-                    Vous pouvez tester le bon fonctionnement en lançant votre programme avec une très grande profondeur d'exploration (ex. 1000).
+                    Tu peux tester le bon fonctionnement en lançant ton programme avec une très grande profondeur d'exploration (ex. 1000).
                 </p>
                 <h4>Messages pendant l'exploration</h4>
                 <p>
-                    <span class="label label-success">1 point</span> Vous devez fournir des messages
+                    <span class="label label-success">1 point</span> Tu dois fournir des messages
                     significatifs dans la console pour chaque exploration d'une page web contenant l'URL complète du fichier.
                 </p>
                 <p>
                     <span class="label label-success">1 point</span> Dans le cas où une URL ne peut être explorée,
-                    vous devez fournir un message significatif incluant l'URL et le problème
+                    tu dois fournir un message significatif incluant l'URL et le problème
 
                 </p>
                 <h4>Sauvegarde des fichiers explorés</h4>
@@ -166,11 +170,11 @@
                 </p>
                 <h4>Collecte des courriels</h4>
                 <p>
-                    <span class="label label-success">1 point</span> Vous devez collecter les adresses courriels 
+                    <span class="label label-success">1 point</span> Tu dois collecter les adresses courriels 
                     contenues dans chaque page pendant l'exploration.
                 </p>
                 <p>
-                    <span class="label label-success">1 point</span> À la fin de l'exécution, vous devez afficher dans la console la liste des courriels collectés sans doublon dans l'ordre alphabétique. 
+                    <span class="label label-success">1 point</span> À la fin de l'exécution, tu dois afficher dans la console la liste des courriels collectés sans doublon dans l'ordre alphabétique. 
                 </p>
             </div>
         </div>
