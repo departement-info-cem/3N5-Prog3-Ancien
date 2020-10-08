@@ -45,53 +45,57 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-4">
                 <h4>Objectif</h4>
                 <p>
-                    Ce travail consiste à programmer un service pour gérer des questions, le calcul
-                    des votes ainsi que la compilation de statistiques. 
+                    Ce travail consiste à . 
                 </p>
-                <p>
-                    Vous devrez programmer les éléments demandés mais également mettre en place des tests
-                    automatiques afin de démontrer la qualité de votre code. 
-                </p>
-                <p>
-                    Vous devrez définir des classes d'exception significatives pour les problèmes possibles. Vous les regrouperez dans le package exceptions (<span class="label label-success">1 point</span>).
-                </p>
-            </div>
-            <div class="col-xs-4">
+                <ul>
+                    <li>programmer un service pour gérer des questions, le calcul
+                    des votes et la compilation de statistiques</li>
+                    <li>mettre en place des tests
+                    automatiques afin de démontrer la qualité de votre code</li>
+                    <li>définir des classes d'exception significatives pour les problèmes possibles</li>
+                </ul>
+                
                 <h4>Fichiers de départ</h4>
                 <p>
                     Vous trouverez une interface décrivant les méthodes à implémenter 
-                    <a class="btn btn-primary btn-xs" href="./docs/Service.java" download="Service.java" target="_blank" >ici</a>.
+                    <a class="btn btn-danger btn-xs" href="./docs/Service.java" download="Service.java" target="_blank" ><strong>ICI</strong></a>.
                     Vous pouvez télécharger l'ensemble du code du cours 
                     <a class="btn btn-primary btn-xs" href="https://github.com/jorisdeguet/420406-Applications/archive/master.zip">ici</a>
                 </p>
+            </div>
+            <div class="col-xs-4">
+                <h4>Git et suivi du code</h4>
+                <div>
+                    <span class="label label-success">1 point</span> Le nom du repo est <em>A20-4203N5-ServoTest-Dupont</em> (remplace Dupont par ton nom de famille) sur github. (Instructions <a href="git.html">ici</a>) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
+                </div>
+                <div>
+                    <span class="label label-success">3 points</span> Un minimum de 8 commits de tailles comparables (il n'y a pas un commit avec tout dedans et les autres vides) décrivant l'avancement du projet dans un français correct (passe Word).
+                </div>
+                
+            </div>
+            <div class="col-xs-4">
+                <h4>Nom du package et des classes</h4>
+                <p>
+                    <span class="label label-success">1 point</span> Vous devez avoir un package appelé <strong>org.votrenom</strong> qui regroupe tous les packages suivants : 
+                </p>
+                <ul>
+                    <li>un package <strong>interfaces</strong> pour la classe d'interface fournie</li>
+                    <li>un package <strong>impl</strong> pour vos classes d'implémentation </li>
+                    <li>un package <strong>modele</strong> pour vos classes du modèle</li>
+                    <li>un package <strong>exceptions</strong> pour vos classes d'exceptions. Vous devez y placer les classes d'exception avec des noms clairs <span class="label label-success">1 point</span></li>
+                </ul>
                 
             </div>
         </div>
         <div class="row">
-            <div class=" ">
-                <h4>Nom du package et des classes</h4>
-                <p>
-                    <span class="label label-success">1 point</span> Vous devez avoir: 
-                </p>
-                <ul>
-                    <li>un package appelé <strong>org.votrenom</strong> qui regroupe tous les packages suivants : </li>
-					<ul>
-						<li>un package <strong>interfaces</strong> pour la classe d'interface fournie</li>
-						<li>un package <strong>impl</strong> pour vos classes d'implémentation </li>
-						<li>un package <strong>modele</strong> pour vos classes du modèle</li>
-						<li>un package <strong>exceptions</strong> pour vos classes d'exceptions</li>
-					</ul>
-                </ul>
-                
-                <h4>Modèles</h4>
-                <strong>Constructeur</strong> 
-                <p>
-                    Vos constructeurs doivent avoir comme argument tous les paramètres de votre classe.
-                </p>
-            </div>
+            <h4>Modèles</h4>
+            <strong>Constructeur</strong> 
+            <p>
+                <span class="label label-success">1 point</span> Pour chaque classe de modèle, vous devez avoir un constructeur sans paramètre et un constructeur prenant tous les champs en paramètres.
+            </p>          
         </div>
         <div class="row">
             <div class=" ">
@@ -99,7 +103,6 @@
 				
                 <strong>Ajouter une question</strong>
                 <p>
-<!--                    <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span>-->
                     Votre service doit permettre d'ajouter une question.
                 </p>
                 <ul>
@@ -114,7 +117,6 @@
                 </ul>
                 <strong>Ajouter un vote</strong>
                 <p>
-<!--                    <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span>-->
                     Votre service doit permettre d'ajouter un vote.
                 </p>
                 <ul>
@@ -175,8 +177,8 @@
                     <li>Vous accédez directement à un champ d'une classe depuis une autre classe (dans le code ou dans les tests)</li>
                     <li>Vous utilisez une méthode définie dans vos classes mais qui n'existe pas dans l'interface (dans le code ou dans les tests)</li>
                 </ul>
-				<p style="font-size:16px">
-					<strong> Vous pouvez créer d’autres méthodes dans la classe d'implémentation pour vous aider <u>mais</u> elles doivent être privées et ne pas être utilisées dans les test </strong>
+				<p style="font-size:1.3em">
+					<strong> Vous pouvez créer d’autres méthodes dans la classe d'implémentation pour vous aider <u>mais</u> elles doivent être privées et ne pas être utilisées dans les tests. </strong>
 				</p>
             </div>
 			<br/>
