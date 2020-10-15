@@ -156,7 +156,27 @@ boolean isValidZipCode(String zippy);
                             </p>
 							<p> Pour vour aider, formattez d'abord votre code pour suivre les signatures des méthodes ici 
 							</p>
+							<pre>
+								<code>
+//Ces 4 méthodes vont throw des exceptions
+void validerNbArguments(String[] args);
+void validerProfondeur(String profondeur);
+void validerURL(String url);
+void validerRepertoire(String repertoire);
 
+//Utiliser les variables retournées pour valider le fonctionnement
+String obtenirHTML(String url);
+List&lt;String> collecterCourriels(String html);
+List&lt;String> trierCourriels(List&lt;String> courriels);
+String remplacerCourriels(String html);
+
+//Valider le contenu des structure de données après l'appel de la fonction
+void explorerPage(int profondeur, String url);
+
+//Utiliser un chemin local: votre test pourra lire le fichier et comparer avec le contenu envoyé
+void ecrireFichier(String chemin, String contenu);
+								</code>
+							</pre>
                         </div>
                     </div>
                 </div>
