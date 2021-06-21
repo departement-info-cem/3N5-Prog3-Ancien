@@ -20,7 +20,7 @@
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand fixed-top navbar-light bg-dark" >
             <div class="container">
-                <a class="navbar-brand text-light" href="#">Apps Orientées Objet</a>
+                <a class="navbar-brand text-light" href="#">3N5 Prog3</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,7 +34,7 @@
 
         <div class="container">
 		    <div class="row">
-                <h3 id="s2">Java, librairie standard et autres librairies</h3>
+                <h3 id="s2">Librairies Java tierces</h3>
             </div>
             <div class="row">
 				<div class="col-md-4">
@@ -44,20 +44,8 @@
 						</div>
 						<div class="card-body">
 							<p>
-							1. La source la plus importante de documentation sur la librairie standard est le javadoc.
-							Parcourez une ou deux pages en partant de
-							<a class="btn btn-sm btn-dark " target="_blank" href="https://docs.oracle.com/javase/7/docs/api/">javadoc</a> (max 20 minutes).
+                                Il existe des milliers de librairies Java pour faire presque tout qui fonctionnent généralement bien. De nombreuses compagnies tech comme Google Twitter ou Square partagent leur librairies.
 							</p> 
-							<p>
-							2. Lire le javadoc de la classe Set
-							<a class="btn btn-sm btn-dark " target="_blank" href="https://docs.oracle.com/javase/7/docs/api/java/util/Set.html">Set</a> (max 10 minutes).
-							</p>
-							<p>
-							3. Regarder les vidéos de théorie -->
-							</p>
-							<p>
-							4. Commencer les exercices de la semaine. Arrêter après 2 heures de travail
-							</p>
 						</div>
 					</div>
 				</div>
@@ -67,15 +55,6 @@
 						<div class="card-body">
 							<div class="embed-responsive embed-responsive-16by9">
 								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KhK604sQik8?rel=0" allowfullscreen></iframe>
-							</div>
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YxLB9Hc9GLI?rel=0" allowfullscreen></iframe>
-							</div>
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0nIQGQ6D6xw?rel=0" allowfullscreen></iframe>
-							</div>
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v4HM5iTfSoE?rel=0" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
@@ -87,10 +66,8 @@
 						</div>
 						<div class="card-body">
 							<ul>
-								<li>Exemples d'applications pour revenir sur les éléments couverts dans la video</li>
-								<li>Correction commentée de l'exercice de moyenne d'un tableau d'entier pour illustrer des tests unitaires</li>
-								<li>Exemple de Map sur une classe que nous allons définir nous même pour hashCode et equals</li>
-								<li>Illustration d'une autre librairie à travers un MultiSet dans Guava</li>
+								<li>Demo de Maven Repository: librairie, version et pom.xml</li>
+								<li>Exemple de recherche de librairie : exemple de https://square.github.io </li>
 							</ul>
 						</div>
 					</div>
@@ -102,8 +79,7 @@
 							<ul>
 								<li>Compléter les exercices de la semaine</li>
 								<li>Continuer le 
-								<a class="btn btn-dark btn-sm" href="phase1.html">premier travail</a><br/>
-								(à remettre au début de la semaine prochaine)
+								<a class="btn btn-dark btn-sm" href="phase1.html">premier travail</a>
 								</li>
 							</ul>
 						
@@ -119,98 +95,35 @@
                     <div>
                         <h2><span class="btn btn-dark btn-lg btn-block mt-5">Exercices de la semaine</span></h2>
 						<div>
-                            <h3>Exercice EntrezUnNombre</h3>
+                            <h3>Exercice Guava</h3>
                             <p>
-                                En utilisant un Scanner sur le System.in, écrivez un programme qui demande à 
-                                l'utilisateur de taper un mot jusqu'à ce que ce soit un nombre entier:
+                                Multiset
                             </p>
-                            <pre class="text-white bg-dark p-3">
-Veuillez entrer un nombre:
-<span>pipo</span>
-Ceci n’est pas un nombre, veuillez entrer un nombre:
-<span>popi</span>
-Ceci n’est pas un nombre, veuillez entrer un nombre:
-<span>123</span>
-Merci votre nombre est 123.</pre>
+                        
+                            <h3>Exercice Jsoup</h3>
                             <p>
-                                Indications
+                                Vous devez écrire un petit programme qui prend une url en paramètre, qui télécharge la page web correspondant, puis qui extrait toutes les balises <em>a</em> de la page et affiche leur attribut href.
                             </p>
-                            <ul>
-                                <li>Tu auras besoin d’un objet de la classe Random pour les tirages aléatoires</li>
-                                <li>Pour trouver la documentation d’une classe, on Google 
-                                    <strong>javadoc <em>nomdelaclasse</em></strong>, ici <strong>javadoc Random</strong>
-                                </li>
-                            </ul>
-                            <h3>Exercice DevineUnNombre</h3>
                             <p>
-                                Ton programme doit tirer un nombre aléatoire entre 1 et 9 puis demander à l’utilisateur de le deviner jusqu’à ce qu’il entre dans la console soit le nombre en question.
+                                Par exemple, si la page contient
                             </p>
-                            <pre class="text-white bg-dark p-3">
-Veuillez deviner le nombre entre 1 et 9:
-<span>3</span>
-Essaie encore:
-<span>2</span>
-Essaie encore:
-<span>8</span>
-Halleluyah!!!
-</pre>
-                            <h3>Exercice DevineUnNom</h3>
+                            <pre>&lt;a href="pipo.html"&gt;test&lt;/a&gt;</pre>
                             <p>
-                                Ton programme doit tirer un nom aléatoire parmi Jean Paul Jacques Martin puis demander à l’utilisateur de le deviner jusqu’à ce qu’il entre dans la console soit le bon nom.
-
+                                le programme devra afficher <em>test = pipo.html</em> dans la console.
                             </p>
-                            <pre class="text-white bg-dark p-3">
-Veuillez deviner un nom parmi Paul Jean Jacques et Martin:
-<span>Paul</span>
-Essaie encore:
-<span>Jean</span>
-Halleluyah!!!
-</pre>
-                            
-                            <h3>Exercice Liste et références</h3>
+                            <h3>Exercice Validation d'un courriel valide</h3>
                             <p>
-                                Avant de commencer tu dois créer une classe Java que tu vas appeler Truc (dans le fichier Truc.java). Ta classe doit avoir 2 champs (propriétés):
+                                Petite recherche, tu dois trouver une librairie qui valide si un courriel est valide. Écris un petit programme avec un <em>main</em> pour voir si la méthode fournie par la librairie fonctionne sur les exemples suivants:
                             </p>
                             <ul>
-                                <li>un int (type entier sur 32 bits) appelé pipo</li>
-                                <li>un String (chaîne de caractères) appelé popi</li>
-                            </ul>
-                            <p>
-                                Tu dois surcharger la méthodes toString de la classe Truc pour afficher les valeurs des 2 champs.
-                            </p>
-                            <p>
-                                Dans ta classe exécutable (celle avec le <em>main</em>), tu dois écrire la séquence d'instructions pour:
-                            </p>
-                            <ul>
-                                <li>Créer 3 objets de classe Truc dans les variables <em>a</em> <em>b</em> et <em>c</em> avec des valeurs différentes pour chaque</li>
-                                <li>Créer une liste appelée liste1 dans laquelle ajouter dans l'ordre a, b puis c</li>
-                                <li>Créer une liste appelée liste2 dans laquelle ajouter dans l'ordre b, c puis a</li>
-                                <li>Modifier les valeurs de l'objet <em>a</em></li>
-                                <li>Afficher les 2 listes à l'aide d'un System.out.println en utilisant le toString de vos listes</li>
-                            </ul>
-                            <p>
-                                Pour compléter l'exercice, il faut faire un dessin pour expliquer ce qui se passe ou un texte. Si tu comprends pas ce qui se passe, on s'en parle.
-                            </p>
-                            
-                            
-                            <h3>Exercice EcritFichier</h3>
-                            <p>
-                                Ton programme doit:
-                            </p>
-                            <ul>
-                                <li>Écrire un fichier vide dans le dossier courant appelé vide.txt</li>
-                                <li>Créer un fichier texte contenant ton nom et ton prénom dans le dossier parent du dossier courant</li>
+                                <li>Ok : jo@pipo.org</li>
+                                <li>Ok : jo</li>
+                                <li>Ok : a.a@a.aa</li>
+                                <li>Ko : </li>
+                                <li>Ko : </li>
+                                <li>Ko : </li>
                             </ul>
                             
-                            
-                            <h3>Exercice LitFichier</h3>
-                            <p>
-                                Ton programme doit:
-                            </p>
-                            <ul>
-                                <li>Prendre un ou plusieurs noms de fichiers comme paramètres de ligne de commandes (le <em>String[]</em> de ta méthode <em>main</em>)</li>
-                                <li>Afficher le contenu de chaque fichier passé en argument dans la console en les séparant par une ligne de -------------</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
