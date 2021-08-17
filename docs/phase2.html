@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +8,7 @@
     <meta name="description" content="page du cours professions informatiques">
     <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-    <title>Projet phase 2</title>
+    <title>Projet phase 3</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -21,172 +20,170 @@
 </head>
 
 <body>
-
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Travail 2 <strong>Questionnaire et tests</strong></a>
-            </div>
-            <div class="navbar-collapse collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Accueil</a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
-
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-4">
-                <h4>Objectif</h4>
-                <p>
-                    Ce travail consiste à . 
-                </p>
-                <ul>
-                    <li>programmer un service pour gérer des questions, le calcul
-                    des votes et la compilation de statistiques</li>
-                    <li>mettre en place des tests
-                    automatiques afin de démontrer la qualité de votre code</li>
-                    <li>définir des classes d'exception significatives pour les problèmes possibles</li>
-                </ul>
-                
-                <h4>Fichiers de départ</h4>
-                <p>
-                    Vous trouverez une interface décrivant les méthodes à implémenter 
-                    <a class="btn btn-danger btn-xs" href="./docs/Service.java" download="Service.java" target="_blank" ><strong>ICI</strong></a>.
-                </p>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Travail 2 : <strong>Interface graphique Android</strong></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Accueil</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-3 well">
+        <div class="col-xs-6 ">
+            <h3>Git et suivi du code</h3>
+            <div>
+                <span class="label label-success">1 point</span> Le nom du repo est <em>A21-4203N5-VotoDroid-Dupont</em> (remplace Dupont par ton nom de famille) sur github. (Instructions : <b><a href="git.html">ici</a></b> & <b><a href="introduction.html">ici</a></b> ) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
             </div>
-            <div class="col-xs-4">
-                <h4>Git et suivi du code</h4>
-                (Ces points sont conditionnés à la remise d'au moins un commit toutes les 2 séances de cours.)
-                <div>
-                    <span class="label label-success">1 point</span> Le nom du repo est <em>A20-4203N5-ServoTest-Dupont</em> (remplace Dupont par ton nom de famille) sur github. (Instructions : <b><a href="git.html">ici</a></b> & <b><a href="introduction.html">ici</a></b> ) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
-                </div>
-                <div>
-                    <span class="label label-success">3 points</span> Un minimum de 8 commits de tailles comparables (il n'y a pas un commit avec tout dedans et les autres vides) décrivant l'avancement du projet dans un français correct (passe Word).
-                </div>
-                
-            </div>
-            <div class="col-xs-4">
-                <h4>Nom du package et des classes</h4>
-                <p>
-                    <span class="label label-success">1 point</span> Vous devez avoir un package appelé <strong>org.votrenom</strong> qui regroupe tous les packages suivants : 
-                </p>
-                <ul>
-                    <li>un package <strong>interfaces</strong> pour la classe d'interface fournie</li>
-                    <li>un package <strong>impl</strong> pour vos classes d'implémentation </li>
-                    <li>un package <strong>modele</strong> pour vos classes du modèle</li>
-                    <li>un package <strong>exceptions</strong> pour vos classes d'exceptions. Vous devez y placer les classes d'exception avec des noms clairs <span class="label label-success">1 point</span></li>
-                </ul>
-                
+            <div>
+                <span class="label label-success">1 point</span> Un minimum de 8 commits de tailles comparables (il n'y a pas un commit avec tout dedans et les autres vides) décrivant l'avancement du projet dans un français correct (passe Word).
             </div>
         </div>
-        <div class="row">
-            <h4>Modèles</h4>
-            <strong>Constructeur</strong> 
+        <div class="col-xs-6 ">
+            <h3>But du travail</h3>
             <p>
-                <span class="label label-success">1 point</span> Pour chaque classe de modèle, vous devez avoir un constructeur sans paramètre et un constructeur prenant tous les champs en paramètres.
-            </p>          
+                Ce TP se concentre sur l'interface graphique, les ajouts ne fonctionnent pas, la liste est toujours la même,
+                on voit toujours la même question quand on en sélectionne une.
+            </p>
+            <p>
+                Le but est de mettre en place les objets graphiques, pas de gérer les données.
+                Vous ne devez pas valider les données non plus, ni afficher de messages d'erreur.
+            </p>
         </div>
-        <div class="row">
-            <div class=" ">
-                <h4>Implémentation du Service</h4>
-				
-                <strong>Ajouter une question</strong>
-                <p>
-                    Votre service doit permettre d'ajouter une question.
-                </p>
-                <ul>
-						
-                    <li><span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span> Pour simuler le fonctionnement de la BD, le id de la question est attribué une fois les vérifications effectuées, au moment d'ajouter la question dans votre structure de données. La méthode doit refuser les objets qui ont un id non <span class="label label-danger">null</span>. Si la méthode s'est exécutée sans erreur, l'objet passé en paramètre doit avoir un id fixé. Si on ajoute 2 questions, les 2 questions devraient recevoir des ids différents.</li>
-
-                    <li><span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span> La longueur de la question doit être entre 5 (inclus) et 255 (inclus) caractères.</li>
-
-                    <li><span class="label label-success">2 point code</span> <span class="label label-primary">3 points test</span> La question doit être unique. (<u>Note</u> : bbb est considéré identique à BBB)</li>
-                    <br/>
-                    <li>Une question peut avoir plusieurs votes.</li>
-                </ul>
-                <strong>Ajouter un vote</strong>
-                <p>
-                    Votre service doit permettre d'ajouter un vote.
-                </p>
-                <ul>
-                    <li> <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span> Pour simuler le fonctionnement de la BD, le id du vote est attribué une fois les vérifications effectuées, au moment d'ajouter le vote dans votre structure de données.</li>
-                    <li> <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span> Les votes sont un indice de satisfaction de 0 à 5 (inclus).</li>
-                    <li> <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span> Une même personne ne peut pas voter deux fois pour la même question. (<u>Note</u> : Maude est considéré identique à maude)</li>
-                    <li> <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span> Un vote doit être associé à une question. (Attention : dans la suite, la base de données est de type SQL, prendre ça en compte pour modéliser les données)</li>
-
-                </ul>
-				
-                <strong>Obtenir les questions triées</strong>
-                <p>
-                    <span class="label label-success">2 point code</span> <span class="label label-primary">3 points test</span>
-                    Votre service doit retourner une version triée de la liste des questions en ordre décroissant du nombre de votes et, si le nombre de votes est identique, en ordre croissant alphabétique.
-                </p>
-				<p> <u>Note</u> : L'ordre alphabétique doit mettre J (j majuscule) avant k (k minuscule).</p>
-				
-                <strong>Calcul de la distribution</strong>
-                <p>
-                    <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span>
-                    Votre service doit calculer la distribution de toutes les valeurs des votes d'une question. Par exemple, si deux usagers ont voté 2/5 et un usager a voté 5/5, la distribution sera de 2 pour 2/5, 1 pour 5/5 et 0 pour toutes les autres valeurs.
-                </p>
-				
-                <strong>Calcul de la moyenne</strong>
-                <p>
-                    <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span>
-                    Votre service doit calculer la moyenne de toutes les valeurs des votes d'une question. Par exemple, si deux usagers ont voté 2/5 et un usager a voté 5/5, la moyenne sera 3/5 (donc 3).
-                </p>
-				
-				<strong>Calcul de l'écart-type</strong>
-                <p>
-                    <span class="label label-success">1 point code</span> <span class="label label-primary">2 points test</span>
-                    Votre service doit calculer l'écart-type de toutes les valeurs des votes d'une question. Par exemple, si deux usagers ont voté 2/5 et un usager a voté 5/5, l'écart-type sera 1.4142135623731...
-                </p>
-			</div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-xs-9 ">
+            <h3>Activité d'accueil</h3>
+            <h4>Mise en page</h4>
+            <p>
+                <span class="label label-success">1 point</span> La mise en page respecte l'image suivante (cliquez pour élargir)
+            </p>
+            <h4>Bouton Ajouter</h4>
+            <p>
+                <span class="label label-success">1 point</span> le bouton fonctionne. Ajouter doit amener à l'activité de création d'une question.
+            </p>
         </div>
-        <div class="row">
-            <div class="  ">
-                <h4>Couverture de code</h4>
-                <p>
-                    <span class="label label-primary">4 points test</span> Regroupez tout le code que vous avez produit dans le package <strong>impl</strong> pour faciliter le calcul de la couverture de code (pourcentage des lignes de code).
-                </p>
-                <ul>
-                    <li>1 point entre 50% et 75%</li>
-                    <li>2 points entre 75% et 85%</li>
-                    <li>3 points entre 85% et 95%</li>
-                    <li>4 points > 95%</li>
-                </ul>
-            </div>
+
+        <div class="col-xs-3 ">
+            <a href="img/phase3-accueil.png"><img src="img/phase3-accueil.png" style="width:100%"/></a>
         </div>
-        <div class="row">
-            <div class=" ">
-                <h4>Manipulation par les interfaces</h4>
-                <p>
-                    <span class="label label-danger">4 points négatifs</span> Tous vos traitements doivent utiliser les méthodes définies dans les interfaces. Vous devez manipuler les objets par l'interface fournie plutôt que par vos classes d'implémentations. Vous perdrez un point à chaque fois que :
-                </p>
-                <ul>
-                    <li>Vous accédez directement à un champ d'une classe depuis une autre classe (dans le code ou dans les tests)</li>
-                    <li>Vous utilisez une méthode définie dans vos classes mais qui n'existe pas dans l'interface (dans le code ou dans les tests)</li>
-                </ul>
-				<p style="font-size:1.3em">
-					<strong> Vous pouvez créer d’autres méthodes dans la classe d'implémentation pour vous aider <u>mais</u> elles doivent être privées et ne pas être utilisées dans les tests. </strong>
-				</p>
-            </div>
-			<br/>
-			<br/>
+
+
+    </div>
+    <div class="row well">
+        <div class="col-xs-6 ">
+            <h3>Création d'une question</h3>
+            <h4>Mise en page</h4>
+            <p>
+                <span class="label label-success">1 point</span> La mise en page respecte l'image suivante (cliquez pour élargir)
+            </p>
+            <h4>Fonctionnement correct</h4>
+            <p>
+                <span class="label label-success">1 point</span> On retourne à l'accueil quand on appuie sur le bouton.
+            </p>
+        </div>
+        <div class="col-xs-3 ">
+            <a href="img/phase3-ajout.png"><img src="img/phase3-ajout.png" style="width:100%"/></a>
+        </div>
+        <div class="col-xs-3 ">
+            <a href="img/phase3-ajout-complet.png"><img src="img/phase3-ajout-complet.png" style="width:100%"/></a>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <div class="row">
+        <div class="col-xs-9 ">
+            <h3>Liste des questions</h3>
+            <h4>Mise en page</h4>
+            <p>
+                <span class="label label-success">1 point</span> La mise en page de chaque élément de la liste respecte l'image suivante (cliquez pour élargir).
+                Vous travaillerez sur une liste codée en dur d'au moins 20 questions
+            </p>
+            <p>
+                <span class="label label-success">1 point</span> Vous travaillerez sur une liste codée en dur d'au moins 20 questions
+            </p>
+            <h4>Comportement</h4>
+            <p>
+                <span class="label label-success">2 points</span> Un appui sur le bouton avec l'icône amène aux résultats. Un appui sur tout autre endroit de la ligne amène à l'écran de vote.
+            </p>
+        </div>
+        <div class="col-xs-3 well">
+            <a href="img/phase3-liste.png"><img src="img/phase3-liste.png" style="width:100%"/></a>
+        </div>
+    </div>
+    <div class="row well">
+        <div class="col-xs-6">
+            <h4>Écran de vote</h4>
+            <p>
+                <span class="label label-success">1 point</span>
+                La mise en page doit correspondre avec un moyen d'enregistrer
+                une note entre 0 et 5 inclus et un champ pour entrer le nom du votant.
+            </p>
+            <p>
+                <span class="label label-success">1 point</span>
+                On retourne à l'écran de liste quand on appuie sur "Vote".
+            </p>
+        </div>
+        <div class="col-xs-3 well">
+            <a href="img/phase3-vote.png"><img src="img/phase3-vote.png" style="width:100%;"/></a>
+        </div>
+        <div class="col-xs-3 well">
+            <a href="img/phase3-vote-complet.png"><img src="img/phase3-vote-complet.png" style="width:100%;"/></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-9">
+            <h4>Écran de résultats</h4>
+            <p>
+                <span class="label label-success">1 point</span>
+                La mise en page correspond et permet d'afficher la moyenne, l'écart type.
+            </p>
+            <p>
+                <span class="label label-success">2 points</span>
+                Le graphique permet d'afficher la distribution des notes.
+            </p>
+        </div>
+        <div class="col-xs-3 well">
+            <a href="img/phase3-resultats.png"><img src="img/phase3-resultats.png" style="width:100%;"/></a>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="">
+            <h3>Fonctionnement global</h3>
+            <p>
+                <span class="label label-danger">3 points négatifs</span>
+                Fonctionnement correct et sans plantage. Ce pointage fonctionne en
+                négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note.
+                Dans le cas contraire, vous perdez des points avec un maximum de 5.
+            </p>
+            <ul>
+                <li>plantage de l'application -1 point</li>
+                <li>interface illisible -1 point</li>
+                <li>information affichée incohérente -1 point</li>
+                <li>autre cas ...</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
