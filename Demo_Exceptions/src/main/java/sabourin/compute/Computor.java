@@ -1,16 +1,16 @@
-package sabourin;
+package sabourin.compute;
 
-import exceptions.MonException;
+import sabourin.exceptions.MonThrowable;
 
 import java.io.*;
 import java.text.ParseException;
 
 //catch an exception only if you can handle it in a meaningful way
 //declare throwing the exception upward if it is to be handled by the consumer of the current method
-//throw exceptions if they are caused by the input parameters (but these are more often unchecked)
+//throw sabourin.exceptions if they are caused by the input parameters (but these are more often unchecked)
 
 public class Computor {
-    public Computor() throws ParseException, MonException {
+    public Computor() throws ParseException, MonThrowable {
         //divide(5,0);
         //show(5);
         //showTryCatch(5);
@@ -94,17 +94,17 @@ public class Computor {
         }
     }
 
-    public void throwLots(int number, String texte) throws ParseException, MonException {
-        if (number < 0) throw new MonException("CHIFFRE NÉGATIF");
+    public void throwLots(int number, String texte) throws ParseException, MonThrowable {
+        if (number < 0) throw new MonThrowable("CHIFFRE NÉGATIF");
         if (texte.equals("3000")) throw new ParseException("bla", 0);
 
         // Pas besoin d'ajouter IllegalArgumentException à la signature  https://stackoverflow.com/questions/5304098/should-i-put-throws-illegalargumentexception-at-the-function
     }
 
-    public void throwMonException() throws MonException {
+    public void throwMonException() throws MonThrowable {
         try {
-            throw new MonException("Pas cool");
-        }catch (MonException e){
+            throw new MonThrowable("Pas cool");
+        }catch (MonThrowable e){
             System.out.println(e.getMessage());
         }
     }

@@ -1,8 +1,8 @@
 package sabourin;
 
-import exceptions.MonException;
+import sabourin.compute.Computor;
+import sabourin.exceptions.MonThrowable;
 
-import java.io.FileNotFoundException;
 import java.text.ParseException;
 
 public class App 
@@ -10,12 +10,10 @@ public class App
     public static void main( String[] args ) {
         try {
             Computor c = new Computor();
-        }catch (ParseException | MonException f){
+        }catch (ParseException | MonThrowable f){
             System.out.println("remonté jusque dans le main");
         }finally{
-            System.out.println("Finally du main");
+            System.out.println("Finally du main, toujours exécuté");
         }
-
-
     }
 }
