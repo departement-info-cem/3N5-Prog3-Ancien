@@ -140,6 +140,17 @@ java.lang.NullPointerException at org.jetbrains.android.sdk.AndroidSdkData.getSd
                                 <li>Clic droit sur le dossier java</li>
                                 <li>Mark Directory As -> Source Root.</li>
                             </ol>
+							
+							<h3>Mon projet fonctionne à la maison, mais pas à l'école</h3>
+                            <ol>
+                                <li>Vous devez mettre le projet sur le Bureau et non sur votre clé USB ou sur un disque dur externe</li>
+                                <li>Aller dans Help > About et regarder le numéro de version (ex : 4.2.1)</li>
+                                <li>Aller dans build.grable (niveau projet) et vérifier que le numéro de cette ligne correspond au numéro de version
+									<br/>
+									<code>    dependencies {
+												classpath 'com.android.tools.build:gradle:4.2.1'
+												}</code></li>
+                            </ol>
                         </div>
                     </div>
                 </div>
