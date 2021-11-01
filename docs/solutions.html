@@ -151,6 +151,15 @@ java.lang.NullPointerException at org.jetbrains.android.sdk.AndroidSdkData.getSd
 												classpath 'com.android.tools.build:gradle:4.2.1'
 												}</code></li>
                             </ol>
+							<h3>Je n'arrive pas à faire fonctionner la librairie MPChart</h3>
+                            <ol>
+                                <li>Assurez-vous d'avoir ajouté les deux lignes de code suivantes</li>
+									<ul><li><code>dependencies {implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'} // Dans le fichier build.gradle(module)</code></li>
+									<li> Si vous avez Android Studio 4.2.1 ou plus ancien  : <code>repositories {maven { url 'https://jitpack.io' }} // Dans le fichier build.gradle(module)</code></li>
+									<li> Si vous avez Android Studio 7.0.1 ou plus récent (Artic Fox) : <code>repositories {maven { url 'https://jitpack.io' }} // Dans le fichier settings.gradle</code></li></ul>
+									</ol>
+									
+                            </ol>
                         </div>
                     </div>
                 </div>
