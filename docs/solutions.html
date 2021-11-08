@@ -168,13 +168,21 @@ is greater than this module's compileSdkVersion (android-30).</li>
 
 Dans <b>build.gradle module</b>
 
-    <code>compileSdkVersion 30 ->     compileSdkVersion 31
-	targetSdkVersion 30 ->      targetSdkVersion 31</code>
+Supprimer la ligne suivante <br/>
+	<code>
+    implementation "androidx.room:room-paging:2.4.0-beta01"
+	</code>
+	<br/>
+	<br/>
+	Retester. Ça ne fonctionne toujours pas?
+	<br/>
+    <code>compileSdkVersion 30 ->     compileSdkVersion 31</code><br/>
+	<code>targetSdkVersion 30 ->      targetSdkVersion 31</code>
 
 <li>Manifest merger failed : Apps targeting Android 12 and higher are required to specify an explicit value for `android:exported`</li>
 Dans <b>Manifest</b>
-        <activity android:name=".MainActivity"
-            android:exported="true">
+<code>activity android:name=".MainActivity"
+            android:exported="true"</code>
 	
 <li>Library dex files are not supported in multi-dex mode</li>
 Dans <b>build.gradle module</b>
