@@ -59,17 +59,17 @@ public class ServiceImplementation{
     }
 
     
-    public float moyenneVotes() {
+    public float moyenneVotes(VDQuestion question) {
         return 0;
     }
 
     
-    public float ecartTypeVotes() {
+    public float ecartTypeVotes(VDQuestion question) {
         return 0;
     }
 
     
-    public Map<Integer, Integer> distributionVotes() {
+    public Map<Integer, Integer> distributionVotes(VDQuestion question) {
         return null;
     }
 }
