@@ -59,14 +59,15 @@
 						<div class="card-header"> Vidéos</div>
 						<div class="card-body">
 							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zZ2_shTjCK0?rel=0" allowfullscreen></iframe>
+								<iframe class="embed-responsive-item" src="https://youtube.com/embed/TsvblQf--nI" allowfullscreen></iframe>
 							</div>
 							<br/>
-							<strong>OPTIONNEL</strong>
 							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VdBsUv4lnm4" allowfullscreen></iframe>
+								<iframe class="embed-responsive-item" src="https://youtube.com/embed/odT2vpyqVN8" allowfullscreen></iframe>
 							</div>
-							 (vidéo de référence en anglais)
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://youtube.com/embed/IOpGBezfUww" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -99,7 +100,7 @@
 							<ul>
 								<li>Compléter les exercices de la semaine</li>
 								<li>Continuer le 
-								<a class="btn btn-dark btn-sm" href="phase2.html">deuxième travail</a><br/>
+								<a class="btn btn-dark btn-sm" href="phase3.html">troisième travail</a><br/>
 								</li>
 							</ul>
 						
@@ -112,25 +113,19 @@
                     <div>
                         <h2><span class="btn btn-dark btn-lg btn-block mt-5">Exercices de la semaine</span></h2>
 						<p>
-                            Pour chaque exercice, vous devrez programmer une classe de code et une classe de tests. Utilisez la couverture de code pour valider que le code est testé en entier.
+                            Pour chaque exercice, vous devrez programmer des tests. Utilisez la couverture de code pour valider que le code est testé en entier.
 						</p>
                         <div>
-                            <h3>Exercice Fibonacci</h3>
+                            <h3>Exercice Aider un ami</h3>
                             <p>
-                                Programmer la suite de Fibonacci en 2 versions.
+                                Jimmy Jo, un étudiant de 3N5, a écrit le code <a href="">suivant</a>. Modifiez son code pour respecter les règles suivantes :
 
                             </p>
-                            <pre>
-BigInteger fibo(BigInteger biggie);
-Long fibo(Long longie);
-</pre>
-                            <p>
-                                Écrire des tests pour s'assurer du bon fonctionnement. Quelques indications:
-                            </p>
                             <ul>
-                                <li>le résultat doit toujours être positif</li>
-                                <li>le fibo d'un nombre est toujours plus grand que le fibo du nombre précédent</li>
-                                <li>si je fais fibo(n)-fibo(n-1) je devrais trouver la valeur de fibo(n-2)</li>
+                                <li>Classe entité : La BD assigne le ID de façon automatique</li>
+                                <li>Test 1 (OKBD) : Lorsqu'on crée notre objet modèle, on laisse son ID Null</li>
+                                <li>Tests 1 & 2 : Vérifient correctement qu'un ID a été généré automatiquement</li>
+								<li>Service : Lance une exception quand il reçoit une personne avec un id ajouté manuellement</li>
                             </ul>
 
                             <h3>Exercice CodePostal</h3>
@@ -149,8 +144,18 @@ boolean isValidZipCode(String zippy);
                                 <li>Ok "H1Y1E1" "H1Y 1E1" "h3Y  1E8"</li>
                                 <li>Ko "H1Y&nbsp;&nbsp;&nbsp;1E1" "H1Y_1E1" "h3Y  1TO"</li>
                             </ul>
-							
-							<h3>Exercice Retour en arrière</h3>
+							<h3>Exercice Chasse aux bogues</h3>
+                            <p>
+                                Partir du code fourni <a href="https://github.com/departement-info-cem/3N5-Prog3/tree/master/TestsExercice3">ici</a> et compléter les TODOs. On vous demande, autant que possible, de trouver les bogues uniquement en écrivant des tests (et non en regardant le code).
+								Documenter ensuite le résultat du test et pourquoi il échoue.
+							</p>
+							<p>Méthodes à tester</p>
+							<ul> 
+                                <li>comparerDix</li>
+                                <li>rochePapierGnocchi</li>
+                                <li>calculate</li>
+                            </ul>
+							<h3>(Optionnel) Exercice Retour en arrière</h3>
                             <p>
                                 Partir de votre code du TP1 WebBot et créer des tests unitaires pour les différents cas d'erreurs possibles.
                             </p>
