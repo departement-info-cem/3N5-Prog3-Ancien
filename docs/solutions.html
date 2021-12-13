@@ -160,6 +160,7 @@ java.lang.NullPointerException at org.jetbrains.android.sdk.AndroidSdkData.getSd
 									</ol>
 									
                             </ol>
+							
 							<h3>Problèmes depuis l'ajout de dépendances ROOM </h3>
 							<ol>
 							<li>The minCompileSdk (31) specified in a
@@ -204,6 +205,23 @@ pickFirst 'androidsupportmultidexversion.txt'
 <li>Instance already used </li>
 File > invalidate cache & restart > invalidate & restart</li>
 </ol>
+							<h3>Installed Build Tools revision 31.0.0 is corrupted </h3>
+							<ol>
+							<li>
+							Allez dans "C:\Users\votreUsager\AppData\Local\Android\Sdk\build-tools\31.0.0" si vous êtes à la maison. À l'école ce sera dans "C:\Android\Sdk\build-tools\31.0.0"
+							</li>
+							<li> Copiez d8.bat et renommer le en dx.bat</li>
+							<li> Allez dans le dossier lib, copiez d8.jar et renommez-le en dx.jar</li>
+							</ol>
+							<h3>Manifest merger failed: Apps targeting Android 12 and higher are required to specify an explicit value for android: exported when the corresponding component has an intent filter defined</h3>
+							<ol>
+							<li>
+							Aller dans le Manifest, ajouter android:exported="true" pour votre Activity d'accueil	
+							| Exemple :<code> activity
+          android:name=".MainActivity"
+          android:exported="true"</code>
+	  </li>
+		  </ol>
                         </div>
                     </div>
                 </div>
