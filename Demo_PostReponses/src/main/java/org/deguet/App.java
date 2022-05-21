@@ -30,7 +30,7 @@ public class App
         System.out.println( "Bonjour, bienvenue dans posts et réponses" );
         do{
             montrerUsage();
-            
+            inputIncorrect = true;
              while(inputIncorrect) {
                 if(scan.hasNextInt()) {
                     choix = scan.nextInt();
@@ -51,13 +51,13 @@ public class App
                     creerReponse(scan, service);
                     break;
                 case 3:
-                    montrerTout(scan, service);
+                    montrerTout(service);
                     break;
                 case 4:
                     sauvegarder(scan, service);
                     break;
                 case 5:
-                    service  = charger(scan, service);
+                    service  = charger(scan);
                     break;
             }
         }while(choix != 6);
@@ -70,18 +70,18 @@ public class App
         String aSauver = new Gson().toJson(service);
         System.out.println(aSauver);
         try {
-            Files.write(aSauver, new File(fichier), Charsets.UTF_8);
+            Files.asCharSink(new File(fichier), Charsets.UTF_8).write(aSauver);
             System.out.println("Sauvegarde réussie");
         } catch (IOException e) {
             System.out.println("Erreur de sauvegarder");
         }
     }
 
-    private static Service charger(Scanner scan, Service service) {
+    private static Service charger(Scanner scan) {
         System.out.println("Nom du fichier?");
         String fichier = scan.next();
         try {
-            String charge = Files.toString(new File(fichier), Charsets.UTF_8);
+            String charge = Files.asCharSource(new File(fichier), Charsets.UTF_8).read();
             System.out.println(charge);
             Service serv = new Gson().fromJson(charge, ServiceImplementation.class);
             return serv;
@@ -91,7 +91,7 @@ public class App
         return null;
     }
 
-    private static void montrerTout(Scanner scan, Service service) {
+    private static void montrerTout(Service service) {
         System.out.println("Tous les posts");
         for (Post post : service.tousLesPosts()){
             System.out.println(" POST :: "+ post.contenu);
