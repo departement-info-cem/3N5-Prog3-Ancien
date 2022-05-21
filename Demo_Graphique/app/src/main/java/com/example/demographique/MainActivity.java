@@ -15,6 +15,7 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,10 +65,14 @@ public class MainActivity extends AppCompatActivity {
         setData(dataGraph);
     }
 
+    /**
+     * methode fournie par le prof pour séparer
+     * - la configuration dans le onCreate
+     * - l'ajout des données dans le setDate
+     * @param datas
+     */
     private void setData(Map<Integer, Integer> datas) {
-
-        ArrayList<BarEntry> values = new ArrayList<>();
-
+        List<BarEntry> values = new ArrayList<>();
         /* Every bar entry is a bar in the graphic */
         for (Map.Entry<Integer, Integer> key : datas.entrySet()){
             values.add(new BarEntry(key.getKey() , key.getValue()));
