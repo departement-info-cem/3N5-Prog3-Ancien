@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="page du cours professions informatiques">
+    <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+    <title>Travail 1 : ExploraWeb2000</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Travail 1 <strong>ExploraWeb2000</strong></a>
+            </div>
+            <div class="navbar-collapse collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Page du cours</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-3">
+                <strong>Parcourir le web</strong>
+                <p>
+                    Le but du premier travail est d'écrire un programme qui parcourt des pages web en traversant à
+                    chaque fois le premier hyperlien qu'on y trouve.
+                </p>
+                <p>
+                    En plus de parcourir les pages, l'application devra
+                </p>
+                <ul>
+                    <li>Sauvegarder localement les pages explorées</li>
+                    <li>Collecter les adresses courriels trouvées dans les pages</li>
+                </ul>
+            </div>
+            <div class="col-md-5 ">
+                <strong>Format de Projet</strong>
+                (Ces points sont conditionnés à la remise d'au moins un commit toutes les 2 séances de cours.)
+                <span class="label label-warning">Remplacer Dupont par <em>TON</em> nom de famille</span>
+                <div>
+                    <span class="label label-success">1 point</span> Le nom du repo GitHub privé est <em>AXX-4203N5-BottyBot-Dupont</em> (remplace Dupont par ton nom de famille, et XX par l'année) sur github. (Instructions <a href="https://departement-info-cem.github.io/git">ici</a>) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
+                </div>
+                <div>
+                    <span class="label label-success">3 points</span> Un minimum de 10 commits de taille comparable (il n'y a pas un commit avec tout dedans et les autres vides) sur l'avancement du projet dans un français correct. Les descriptions doivent exister et correspondre aux modifications du commit.
+                </div>
+                <div>
+                    <span class="label label-success">0,5 point</span> La classe principale de l'application doit s'appeler <em>ExploraDupont2000.java</em>
+                </div>
+                <div>    
+                    <span class="label label-success">0,5 point</span> Le package principal de l'application doit s'appeler <em>dupont.explora</em>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <strong>Correction</strong>
+                <p>
+                    L'ensemble de la correction est effectuée sur le  
+                    <a class="btn btn-danger btn-xs" href="./z/">site de correction</a>.
+                    Tu peux tester ton bot sur d'autres sites mais ça n'aura pas d'impact sur la correction.
+                </p>    
+                <p>
+                    Tu as une video de correction TODO
+                </p>
+                <p>
+                    Tu as aussi une liste de photos des résultats attendus TODO
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ">
+                <h3>
+                  Gestion des arguments
+                </h3>
+                <h4>Arguments en ligne de commandes</h4>
+                <p>
+                    Ton application doit prendre 2 arguments en ligne de commande dans l'ordre spécifié ici.
+                </p>
+                <div class="alert alert-danger" role="alert">
+                    <strong>Attention!</strong> Il ne s'agit pas d'une application intéractive. Tu dois passer les paramètres en ligne de commandes. Il est fortement recommandé de créer plusieurs configurations d'exécution dans Intellij IDEA pour tester plusieurs combinaisons de paramètres corrects ou incorrects.
+                </div>
+                <p>
+                    <span class="label label-success">1 point</span> Dans le cas où l'utilisateur ne fournit pas le bon nombre d'arguments tu dois lui indiquer clairement comment utiliser l'application.
+                </p>
+                <ul>
+                    <li>combien d'arguments</li>
+                    <li>quel est le rôle de chacun</li>
+                    <li>un exemple d'utilisation</li>
+                </ul>
+                Les arguments sont:
+                <ol>
+                   <li><span class="label label-success">2 points</span> l'url de départ qui est la première page à explorer. Il doit s'agir d'une adresse valide (le format est correct et il y a une page qui y correspond).</li>
+                    <li><span class="label label-success">2 points</span> une liste de mots clé permettant d'indiquer les URLs qu'on souhaite ignorer dans l'exploration</li>
+
+                </ol>
+                <p>
+                    Pour chaque argument, tu obtiens un point s'il est bien pris en compte et un point si tu affiches un message significatif quand la valeur n'est pas bonne ou absente.
+                </p>
+            </div>
+
+            <div class="col-md-12 ">
+                <h3>
+                  Traitement
+                </h3>
+                <h4>Exploration</h4>
+                <p>
+                    <span class="label label-success">3 points</span>
+                    Pour chaque étape de l'exploration, on télécharge le html correspondant à l'url actuel
+                </p>
+                <ul>
+                    <li>on télécharge le html correspondant à l'url actuelle</li>
+                    <li>on récupère tous les liens hypertextes (balise a avec attribut href)</li>
+                    <li>on cherche le premier lien qui correspond à nos critères</li>
+                    <li>l'url courante devient ce premier lien</li>
+                    <li>on continue jusqu'à ce qu'on tombe sur une URL déjà explorée</li>
+                </ul>
+                <p>
+                    On ne souhaite pas forcément explorer le tout premier lien
+                </p>
+                <ul>
+                    <li>Il faut que le lien pointe sur le même hôte (ex : https://<strong>fr.wikipedia.org</strong>/gnagna) que l'url actuelle</li>
+                    <li>Il faut que l'url ne soit pas une url interne (qui pointe vers le même fichier) de type <em>#intra</em></li>
+                    <li>Il faut que l'URL ne contienne aucun des mots de la liste passée en 2ème argument</li>
+                </ul>
+
+                <h4>Mémoire de l'exploration</h4>
+                <p>
+                    <span class="label label-success">1 point</span>
+                    Ton explorateur doit s'arrêter dès qu'il explore une URL qu'il a déjà rencontré.
+                </p>
+                <h4>Messages pendant l'exploration</h4>
+                <p>
+                    <span class="label label-success">1 point</span> Tu dois fournir des messages
+                    significatifs dans la console pour chaque exploration d'une page web contenant l'URL complète du fichier.
+                </p>
+                <h4>Sauvegarde des fichiers explorés</h4>
+                <p>
+                    <span class="label label-success">1 point</span> Chaque page html explorée doit être stockée dans un
+                    fichier dans le sous-dossier <em>resultat</em> du dossier courant. Par exemple, le premier fichier
+                    exploré doit se trouver dans le fichier <em>./resultat/1.html</em>, le deuxième dans
+                    <em>./resultat/2.html</em> etc.
+                    <span class="label label-success">1 point</span> Si le dossier resultat n'existe pas, il est créé
+                    automatiquement. Si des fichiers existent déjà dans le dossier ils sont remplacés.
+                </p>
+                <p>
+                    <span class="label label-success">1 point</span> Chaque apparition d'une adresse courriel dans le
+                    contenu d'une page doit être remplacé par <em>tonprenom@tonnom.com</em>.
+                </p>
+                <p>
+                    <span class="label label-success">2 points</span>
+                    L'attribut href de chaque page doit être modifié pour pointer de manière relative vers le prochain
+                    fichier exploré. Par exemple, dans le fichier <em>3.html</em>, il faut modifier le href de la balise
+                    qui lie vers la prochaine page (4.html) pour <pre>&lt;a href="4.html" ...</pre>
+                </p>
+                <h4>Collecte des courriels</h4>
+                <p>
+                    <span class="label label-success">1 point</span> Tu dois collecter les adresses courriels 
+                    contenues dans chaque page pendant l'exploration.
+                </p>
+                <p>
+                    <span class="label label-success">1 point</span>
+                    L'application doit sauver la liste des courriels collectés dans un fichier appelé courriels.txt
+                    qui doit se trouver dans le dossier courant (pour un projet Maven, c'est le dossier du projet).
+                </p>
+                <p>
+                    <span class="label label-success">1 point</span>
+                    Dans ce fichier, tu dois avoir chaque courriel sur une ligne séparé, classés dans l'ordre
+                    alphabétique. Si un courriel a été trouvé plusieurs fois dans l'exploration, tu dois supprimer
+                    les doublons avant de sauver le fichier.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
