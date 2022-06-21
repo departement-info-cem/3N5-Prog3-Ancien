@@ -45,35 +45,39 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <strong>Parcourir le web</strong>
                 <p>
-                    Le but du premier travail est d'écrire un programme qui parcourt des pages web en traversant à
+                    Ecrivons un programme qui parcourt des pages web en traversant à
                     chaque fois le premier hyperlien qu'on y trouve.
                 </p>
                 <p>
-                    En plus de parcourir les pages, l'application devra
+                    L'application devra
                 </p>
                 <ul>
-                    <li>Sauvegarder localement les pages explorées</li>
-                    <li>Collecter les adresses courriels trouvées dans les pages</li>
+                    <li>Sauvegarder localement chaque fichier HTML exploré</li>
+                    <li>Trouver les adresses courriels et les sauver dans un fichier</li>
                 </ul>
             </div>
-            <div class="col-md-5 ">
+            <div class="col-md-4 ">
                 <strong>Format de Projet</strong>
-                (Ces points sont conditionnés à la remise d'au moins un commit toutes les 2 séances de cours.)
                 <span class="label label-warning">Remplacer Dupont par <em>TON</em> nom de famille</span>
                 <div>
-                    <span class="label label-success">1 point</span> Le nom du repo GitHub privé est <em>AXX-4203N5-BottyBot-Dupont</em> (remplace Dupont par ton nom de famille, et XX par l'année) sur github. (Instructions <a href="https://departement-info-cem.github.io/git">ici</a>) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
+                    <span class="label label-success">1 point</span>
+                    Le nom du repo GitHub <strong>privé</strong> est <em>AXX-4203N5-ExploraWeb-Dupont</em>
+                    (remplace Dupont par ton nom de famille, et XX par l'année).
+                    Ajoutez le professeur aux collaborateurs de ton repo.
                 </div>
                 <div>
-                    <span class="label label-success">3 points</span> Un minimum de 10 commits de taille comparable (il n'y a pas un commit avec tout dedans et les autres vides) sur l'avancement du projet dans un français correct. Les descriptions doivent exister et correspondre aux modifications du commit.
+                    <span class="label label-success">3 points</span>
+                    Il y a 5 commits valides dans un français correct (voir <a href="https://info.cegepmontpetit.ca/git">ici</a>).
+                    Ces points sont conditionnés à la remise d'au moins un commit par semaine de cours.
                 </div>
                 <div>
-                    <span class="label label-success">0,5 point</span> La classe principale de l'application doit s'appeler <em>ExploraDupont2000.java</em>
+                    <span class="label label-success">0,5 point</span> La classe principale s'appele <em>ExploraDupont2000.java</em>
                 </div>
                 <div>    
-                    <span class="label label-success">0,5 point</span> Le package principal de l'application doit s'appeler <em>dupont.explora</em>
+                    <span class="label label-success">0,5 point</span> Le package de l'application est <em>dupont.explora</em>
                 </div>
             </div>
             <div class="col-md-4 ">
@@ -93,58 +97,121 @@
         </div>
         <div class="row">
             <div class="col-md-12 ">
-                <h3>
-                  Gestion des arguments
-                </h3>
                 <h4>Arguments en ligne de commandes</h4>
                 <p>
                     Ton application doit prendre 2 arguments en ligne de commande dans l'ordre spécifié ici.
                 </p>
                 <div class="alert alert-danger" role="alert">
-                    <strong>Attention!</strong> Il ne s'agit pas d'une application intéractive. Tu dois passer les paramètres en ligne de commandes. Il est fortement recommandé de créer plusieurs configurations d'exécution dans Intellij IDEA pour tester plusieurs combinaisons de paramètres corrects ou incorrects.
+                    <strong>Attention!</strong> Il ne s'agit pas d'une application intéractive. Tu dois passer les
+                    arguments en ligne de commandes.
+                    Il est fortement recommandé de créer plusieurs configurations d'exécution our
+                    tester plusieurs combinaisons de paramètres corrects ou
+                    incorrects.
                 </div>
                 <p>
-                    <span class="label label-success">1 point</span> Dans le cas où l'utilisateur ne fournit pas le bon nombre d'arguments tu dois lui indiquer clairement comment utiliser l'application.
+                    <span class="label label-success">1 point</span> Si l'utilisateur ne fournit pas 2 arguments,
+                    on lui indique clairement comment utiliser l'application puis l'application s'arrêter.
                 </p>
                 <ul>
-                    <li>combien d'arguments</li>
-                    <li>quel est le rôle de chacun</li>
+                    <li>quels sont les arguments</li>
                     <li>un exemple d'utilisation</li>
                 </ul>
-                Les arguments sont:
-                <ol>
-                   <li><span class="label label-success">2 points</span> l'url de départ qui est la première page à explorer. Il doit s'agir d'une adresse valide (le format est correct et il y a une page qui y correspond).</li>
-                    <li><span class="label label-success">2 points</span> une liste de mots clé permettant d'indiquer les URLs qu'on souhaite ignorer dans l'exploration</li>
+                <pre>Merci de nous fournir 2 paramètres : l'URL de la page de départ, la liste de mots clés à ignorer séparés par des espaces entre guillemets.
+                Par exemple : <em>https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi"</em></pre>
 
-                </ol>
                 <p>
-                    Pour chaque argument, tu obtiens un point s'il est bien pris en compte et un point si tu affiches un message significatif quand la valeur n'est pas bonne ou absente.
+                    <span class="label label-success">1 point</span> Si l'utilisateur a bien entré 2 arguments, il faut valider l'URL
+                    avant de commencer le traitement. Il faut afficher un message significatif si l'URL est mal formé puis quitter.
                 </p>
+                <pre>Nous avons rencontré un problème avec l'URL fournie : htps:/info.cegepmontpetit.ca/
+                    Merci de fournir une URL bien formée</pre>
+
+                <p>
+                    <span class="label label-success">1 point</span> Si l'URL est correctement formée, il faut s'assurer
+                    qu'il existe une page à l'adresse fournie. Si ce n'est pas le cas, affichez un message puis quittez.
+                </p>
+                <pre>Il n'y a pas de page correspondante à l'URL : https://info.cegepmontptit.ca/
+                    Merci de fournir une URL correspondant à une page.</pre>
+
+                <p>
+                    <span class="label label-success">1 point</span> Si l'argument URL est correct, il faut s'assurer
+                    que la liste de mots clés est correcte. Nous validons qu'elle ne contient pas de répétitions.
+                </p>
+                <pre>Mots clés fournis incorrects "pipo aaa pipo".
+                    Merci de ne pas avoir de répétitions dans les mots clés : pipo</pre>
             </div>
 
             <div class="col-md-12 ">
-                <h3>
-                  Traitement
-                </h3>
                 <h4>Exploration</h4>
                 <p>
-                    <span class="label label-success">3 points</span>
-                    Pour chaque étape de l'exploration, on télécharge le html correspondant à l'url actuel
+                    <span class="label label-success">1 point</span> Si les arguments sont corrects, il faut alors
+                    commencer l'exploration de la première page. Tu dois afficher dans la console le titre
+                    (<em>title</em>) de la page et l'URL complète. Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi"
                 </p>
-                <ul>
-                    <li>on télécharge le html correspondant à l'url actuelle</li>
-                    <li>on récupère tous les liens hypertextes (balise a avec attribut href)</li>
-                    <li>on cherche le premier lien qui correspond à nos critères</li>
-                    <li>l'url courante devient ce premier lien</li>
-                    <li>on continue jusqu'à ce qu'on tombe sur une URL déjà explorée</li>
-                </ul>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4</pre>
                 <p>
-                    On ne souhaite pas forcément explorer le tout premier lien
+                    <span class="label label-success">1 point</span> L'exploration devrait continuer en explorant
+                    le premier lien de chaque page. L'exploration s'arrête si une page de contient aucun lien.
+                    Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi" TODO exemple avec cul de sac
+                </p>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    L'exploration s'est arrêté, la page https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html ne contient aucun lien valide.</pre>
+
+                <p>
+                    <span class="label label-success">1 point</span> Afin d'éviter des boucles infinies, l'exploration doit s'arrêter
+                    si le programme rencontre une URL déjà explorée. Il faut afficher un message significatif.
+                    Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html ""
+                </p>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée : mdklfjsdlkfjsdklfsd</pre>
+
+                <p>
+                    <span class="label label-success">1 point</span> On veut pouvoir contrôler l'exploration en forçant
+                    notre application à ignorer certains liens.
                 </p>
                 <ul>
-                    <li>Il faut que le lien pointe sur le même hôte (ex : https://<strong>fr.wikipedia.org</strong>/gnagna) que l'url actuelle</li>
-                    <li>Il faut que l'url ne soit pas une url interne (qui pointe vers le même fichier) de type <em>#intra</em></li>
-                    <li>Il faut que l'URL ne contienne aucun des mots de la liste passée en 2ème argument</li>
+                    <li>Si le premier lien d'une page a une URL qui contient un des mots
+                    clés passés en argument, on veut sauter ce lien est passer au suivant jusqu'à trouver un lien ne
+                    contenant aucun des mots clés.</li>
+                    <li>Si l'URL pointe vers la page actuelle (URL interne), on devrait ignorer le lien et passer au suivant</li>
+                </ul>
+                Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo aaa"  EXEMPLE EN IGNORANT
+                </p>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée : mdklfjsdlkfjsdklfsd
+                </pre>
+
+                Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html ""  EXEMPLE URL INTERNE
+                </p>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
+                    L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée : mdklfjsdlkfjsdklfsd
+                </pre>
+
+
+                <ul>
+                    <li>Il faut que le lien pointe sur le même hôte
+                        (ex : https://<strong>fr.wikipedia.org</strong>/gnagna) que l'url actuelle</li>
+                    <li>
+                        Il faut que l'url ne soit pas une url interne (qui pointe vers le même fichier) de
+                        type <em>#intra</em>
+                    </li>
+                    <li>
+                        Il faut que l'URL ne contienne aucun des mots de la liste passée en 2ème argument
+                    </li>
                 </ul>
 
                 <h4>Mémoire de l'exploration</h4>
@@ -155,26 +222,29 @@
                 <h4>Messages pendant l'exploration</h4>
                 <p>
                     <span class="label label-success">1 point</span> Tu dois fournir des messages
-                    significatifs dans la console pour chaque exploration d'une page web contenant l'URL complète du fichier.
+                    significatifs dans la console pour chaque exploration d'une page web avec le
+                    titre (<em>title</em>) de la page et l'URL complète
+                    du fichier.
                 </p>
                 <h4>Sauvegarde des fichiers explorés</h4>
                 <p>
-                    <span class="label label-success">1 point</span> Chaque page html explorée doit être stockée dans un
-                    fichier dans le sous-dossier <em>resultat</em> du dossier courant. Par exemple, le premier fichier
-                    exploré doit se trouver dans le fichier <em>./resultat/1.html</em>, le deuxième dans
-                    <em>./resultat/2.html</em> etc.
-                    <span class="label label-success">1 point</span> Si le dossier resultat n'existe pas, il est créé
-                    automatiquement. Si des fichiers existent déjà dans le dossier ils sont remplacés.
+                    <span class="label label-success">1 point</span>
+                    Chaque page html explorée doit être stockée dans un fichier avec le même nom que la resource
+                    explorée (index.html, 1.html etc.).
                 </p>
                 <p>
-                    <span class="label label-success">1 point</span> Chaque apparition d'une adresse courriel dans le
-                    contenu d'une page doit être remplacé par <em>tonprenom@tonnom.com</em>.
+                    <span class="label label-success">1 point</span>
+                    Chaque apparition d'une adresse courriel dans le contenu d'une page doit être remplacé par
+                    <em>prenom.nom@pipo.org</em> avant l'écriture sur le disque.
                 </p>
                 <p>
                     <span class="label label-success">2 points</span>
-                    L'attribut href de chaque page doit être modifié pour pointer de manière relative vers le prochain
-                    fichier exploré. Par exemple, dans le fichier <em>3.html</em>, il faut modifier le href de la balise
-                    qui lie vers la prochaine page (4.html) pour <pre>&lt;a href="4.html" ...</pre>
+                    Les liens relatifs entre pages téléchargées doivent être fonctionnels et doivent pointer vers
+                    les fichiers locaux si 2 pages sont dans le même dossier.
+                </p>
+                <p>
+                    <span class="label label-success">2 points</span> Les liens relatifs doivent fonctionner
+                    entre resources locales dans des dossiers différents.
                 </p>
                 <h4>Collecte des courriels</h4>
                 <p>
