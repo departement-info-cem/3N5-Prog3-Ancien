@@ -116,29 +116,29 @@
                     <li>quels sont les arguments</li>
                     <li>un exemple d'utilisation</li>
                 </ul>
-                <pre>Merci de nous fournir 2 paramètres : l'URL de la page de départ, la liste de mots clés à ignorer séparés par des espaces entre guillemets.
-                Par exemple : <em>https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi"</em></pre>
+                <pre>Merci de nous fournir 2 arguments :
+l'URL de la page de départ, la liste de mots clés à ignorer séparés par des espaces entre guillemets.
+Par exemple : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi"</pre>
 
                 <p>
                     <span class="label label-success">1 point</span> Si l'utilisateur a bien entré 2 arguments, il faut valider l'URL
                     avant de commencer le traitement. Il faut afficher un message significatif si l'URL est mal formé puis quitter.
                 </p>
                 <pre>Nous avons rencontré un problème avec l'URL fournie : htps:/info.cegepmontpetit.ca/
-                    Merci de fournir une URL bien formée</pre>
-
+Merci de fournir une URL bien formée</pre>
                 <p>
                     <span class="label label-success">1 point</span> Si l'URL est correctement formée, il faut s'assurer
                     qu'il existe une page à l'adresse fournie. Si ce n'est pas le cas, affichez un message puis quittez.
                 </p>
                 <pre>Il n'y a pas de page correspondante à l'URL : https://info.cegepmontptit.ca/
-                    Merci de fournir une URL correspondant à une page.</pre>
+Merci de fournir une URL correspondant à une page.</pre>
 
                 <p>
                     <span class="label label-success">1 point</span> Si l'argument URL est correct, il faut s'assurer
                     que la liste de mots clés est correcte. Nous validons qu'elle ne contient pas de répétitions.
                 </p>
                 <pre>Mots clés fournis incorrects "pipo aaa pipo".
-                    Merci de ne pas avoir de répétitions dans les mots clés : pipo</pre>
+Merci de ne pas avoir de répétitions dans les mots clés : pipo</pre>
             </div>
 
             <div class="col-md-12 ">
@@ -148,28 +148,23 @@
                     commencer l'exploration de la première page. Tu dois afficher dans la console le titre
                     (<em>title</em>) de la page et l'URL complète. Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi"
                 </p>
-                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4</pre>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
+Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4</pre>
                 <p>
                     <span class="label label-success">1 point</span> L'exploration devrait continuer en explorant
                     le premier lien de chaque page. L'exploration s'arrête si une page de contient aucun lien.
-                    Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi" TODO exemple avec cul de sac
                 </p>
-                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    L'exploration s'est arrêté, la page https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html ne contient aucun lien valide.</pre>
+                Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/ "plop"
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/
+Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/   liens 4
+Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
+Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+Titre : Pic et Pic                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/index.html   liens 2
+Titre : La page 5                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html   liens 0
+L'exploration s'est arrêté, la page https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html ne contient aucun lien valide.
+</pre>
 
-                <p>
-                    <span class="label label-success">1 point</span> Afin d'éviter des boucles infinies, l'exploration doit s'arrêter
-                    si le programme rencontre une URL déjà explorée. Il faut afficher un message significatif.
-                    Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html ""
-                </p>
-                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée : mdklfjsdlkfjsdklfsd</pre>
+
 
                 <p>
                     <span class="label label-success">1 point</span> On veut pouvoir contrôler l'exploration en forçant
@@ -177,55 +172,34 @@
                 </p>
                 <ul>
                     <li>Si le premier lien d'une page a une URL qui contient un des mots
-                    clés passés en argument, on veut sauter ce lien est passer au suivant jusqu'à trouver un lien ne
-                    contenant aucun des mots clés.</li>
+                        clés passés en argument, on veut sauter ce lien est passer au suivant jusqu'à trouver un lien ne
+                        contenant aucun des mots clés.</li>
                     <li>Si l'URL pointe vers la page actuelle (URL interne), on devrait ignorer le lien et passer au suivant</li>
                 </ul>
-                Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo aaa"  EXEMPLE EN IGNORANT
+                Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo aaa"
                 </p>
-                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée : mdklfjsdlkfjsdklfsd
-                </pre>
-
-                Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html ""  EXEMPLE URL INTERNE
-                </p>
-                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</em>
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    Titre : Am              url : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html         nombre de liens : 4
-                    L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée : mdklfjsdlkfjsdklfsd
-                </pre>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
+Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
+Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
+Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
+Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
+Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4 ...</pre>
 
 
-                <ul>
-                    <li>Il faut que le lien pointe sur le même hôte
-                        (ex : https://<strong>fr.wikipedia.org</strong>/gnagna) que l'url actuelle</li>
-                    <li>
-                        Il faut que l'url ne soit pas une url interne (qui pointe vers le même fichier) de
-                        type <em>#intra</em>
-                    </li>
-                    <li>
-                        Il faut que l'URL ne contienne aucun des mots de la liste passée en 2ème argument
-                    </li>
-                </ul>
 
-                <h4>Mémoire de l'exploration</h4>
                 <p>
-                    <span class="label label-success">1 point</span>
-                    Ton explorateur doit s'arrêter dès qu'il explore une URL qu'il a déjà rencontré.
+                    <span class="label label-success">1 point</span> Afin d'éviter des boucles infinies, l'exploration doit s'arrêter
+                    si le programme rencontre une URL déjà explorée. Il faut afficher un message significatif.
+                    Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "aaa pipo"
                 </p>
-                <h4>Messages pendant l'exploration</h4>
-                <p>
-                    <span class="label label-success">1 point</span> Tu dois fournir des messages
-                    significatifs dans la console pour chaque exploration d'une page web avec le
-                    titre (<em>title</em>) de la page et l'URL complète
-                    du fichier.
-                </p>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
+Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
+Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
+Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</pre>
+                
+
                 <h4>Sauvegarde des fichiers explorés</h4>
                 <p>
                     <span class="label label-success">1 point</span>
@@ -248,13 +222,10 @@
                 </p>
                 <h4>Collecte des courriels</h4>
                 <p>
-                    <span class="label label-success">1 point</span> Tu dois collecter les adresses courriels 
-                    contenues dans chaque page pendant l'exploration.
-                </p>
-                <p>
                     <span class="label label-success">1 point</span>
-                    L'application doit sauver la liste des courriels collectés dans un fichier appelé courriels.txt
-                    qui doit se trouver dans le dossier courant (pour un projet Maven, c'est le dossier du projet).
+                    Le programme collecte les adresses courriels contenues dans chaque page pendant l'exploration.
+                    L'application doit sauver la liste des courriels collectés dans un fichier
+                    <em>dossier_du_projet</em>/resultat/courriels.txt
                 </p>
                 <p>
                     <span class="label label-success">1 point</span>
@@ -262,6 +233,8 @@
                     alphabétique. Si un courriel a été trouvé plusieurs fois dans l'exploration, tu dois supprimer
                     les doublons avant de sauver le fichier.
                 </p>
+                Par exemple, pour les arguments
+                <pre></pre>
             </div>
         </div>
     </div>
