@@ -93,16 +93,7 @@
                     <div>
                         <h2><span class="btn btn-dark btn-lg btn-block mt-5">Exercices de la semaine</span></h2>
 						<div>
-                            <h3>Exercice Guava</h3>
-                            <p>
-                                Une des collections qui est disponible avec Guava est le Multiset. Importez la librairie et consultez la documentation :
-								<ol>
-								<li> Qu'est-ce que le Multiset a de différent avec le Set?</li>
-								<li> Implémentez un Multiset en insérant les valeurs suivantes : "Pomme", "Carotte", "Patate", "Pomme"</li>
-								<li> Avec une seule ligne de code, mettre 50 "Carotte" dans le Multiset (consultez la documentation)</li>
-								</ol>
-                            </p>
-                        
+
                             <h3>Exercice Jsoup</h3>
                             <p>
                                 Vous devez écrire un petit programme qui prend une url en paramètre, qui télécharge la page web correspondant, puis qui extrait toutes les balises <em>a</em> de la page et affiche leur attribut href.
@@ -126,7 +117,47 @@
                                 <li>Ko : a.b@ab</li>
                                 <li>Ko : jo</li>
                             </ul>
-                            
+
+                            <h3>Exercice ArrayList LinkedList et GapList (externe)</h3>
+                            On vent comparer les performances de plusieurs implémentations de <em>List</em> quand on
+                            parle de performance pour l'insertion.
+
+                            <p>
+                                On souhaite comparer le temps d'exécution nécessaire pour:
+                            </p>
+                            <ul>
+                                <li>ajouter 1000 éléments en dernière position dans la liste</li>
+                                <li>ajouter 1000 éléments en première position dans la liste</li>
+                                <li>ajouter 1000 éléments dans une position au hasard dans la liste</li>
+                            </ul>
+                            <p>
+                                Pour permettre de tester plusieurs listes, on vous recommande de créer une méthode
+                            </p>
+                            <pre>
+    void testeCetteListe(List&lt;Integer&gt; liste){
+        Random random = new Random(1234);
+        long a = System.currentTimeMillis();
+        // ajouter 1000 element en dernière position liste.add(nombre);
+        long b = System.currentTimeMillis();
+        // ajouter 1000 element en première position liste.add(0, nombre);
+        long c = System.currentTimeMillis();
+        // ajouter 1000 element position au hasard liste.add(random.nextInt(liste.size()), nombre);
+        long d = System.currentTimeMillis();
+        // afficher b-a, c-b, d-c qui sont les durées d'exécution en millisecondes
+    }
+</pre>
+                            <p>
+                                Le but est de voir quelle liste est la plus performante entre LinkedList, ArrayList et
+                                une dernière que vous trouverez dans la librairie suivante
+                                <a href="http://www.magicwerk.org/page-collections-download.html">GapList</a>.
+                            </p>
+                            <p>
+                                Du coup avec un <em>main</em> qui appelle la méthode testeCetteListe pour une
+                                LinkedList puis une ArrayList puis une GapList, vous aurez une bonne idée des
+                                performances respectives.
+                            </p>
+
+
                         </div>
                     </div>
                 </div>
