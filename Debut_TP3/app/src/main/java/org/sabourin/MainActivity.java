@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .fallbackToDestructiveMigration()
                 .build();
-        service = ServiceImplementation.getInstance(maBD);
+        service = new ServiceImplementation(maBD);
         creerQuestion();
     }
 

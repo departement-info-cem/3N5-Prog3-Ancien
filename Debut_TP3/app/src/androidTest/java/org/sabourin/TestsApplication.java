@@ -33,7 +33,7 @@ public class TestsApplication {
     public void createDb() {
         Context context = ApplicationProvider.getApplicationContext();
         bd = Room.inMemoryDatabaseBuilder(context, BD.class).build();
-        service = ServiceImplementation.getInstance(bd);
+        service = new ServiceImplementation(bd);
     }
 
 

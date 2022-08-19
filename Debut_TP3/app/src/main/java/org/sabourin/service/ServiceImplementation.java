@@ -13,21 +13,11 @@ import java.util.Map;
 
 public class ServiceImplementation{
 
-    private static ServiceImplementation single_instance = null;
     private BD maBD;
 
-    private ServiceImplementation (BD maBD){
+    public ServiceImplementation (BD maBD){
         this.maBD = maBD;
     }
-
-    public static ServiceImplementation getInstance(BD maBD)
-    {
-        if (single_instance == null)
-            single_instance = new ServiceImplementation(maBD);
-
-        return single_instance;
-    }
-
 
     public void creerQuestion(VDQuestion vdQuestion) throws MauvaiseQuestion {
         // Validation
@@ -54,17 +44,15 @@ public class ServiceImplementation{
 
     
     public List<VDQuestion> toutesLesQuestions() {
-        //TODO Trier la liste reçue en BD par nombre de votes et la retourner
+        //TODO Présentement :   retourne une liste vide
+        //TODO À faire :        trier la liste reçue en BD par le nombre de votes et la retourner
+
+
         return new ArrayList<>();
     }
 
     
     public float moyenneVotes(VDQuestion question) {
-        return 0;
-    }
-
-    
-    public float ecartTypeVotes(VDQuestion question) {
         return 0;
     }
 
