@@ -116,6 +116,7 @@
                     <li>quels sont les arguments</li>
                     <li>un exemple d'utilisation</li>
                 </ul>
+				<p> <b>Exemple</b> - Argument : allo </p>
                 <pre>Merci de nous fournir 2 arguments :
 l'URL de la page de départ, la liste de mots clés à ignorer séparés par des espaces entre guillemets.
 Par exemple : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi"</pre>
@@ -124,12 +125,14 @@ Par exemple : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi"<
                     <span class="label label-success">1 point</span> Si l'utilisateur a bien entré 2 arguments, il faut valider l'URL
                     avant de commencer le traitement. Il faut afficher un message significatif si l'URL est mal formé puis quitter.
                 </p>
+				<p> <b>Exemple</b> - Arguments : htps:/info.cegepmontpetit.ca/ "salut" </p>
                 <pre>Nous avons rencontré un problème avec l'URL fournie : htps:/info.cegepmontpetit.ca/
 Merci de fournir une URL bien formée</pre>
                 <p>
                     <span class="label label-success">1 point</span> Si l'URL est correctement formée, il faut s'assurer
-                    qu'il existe une page à l'adresse fournie. Si ce n'est pas le cas, affichez un message puis quittez.
+                    qu'il existe une page à l'adresse fournie. Si ce n'est pas le cas, affichez un message puis quitter.
                 </p>
+				<p> <b>Exemple</b> - Arguments : https://info.cegepmontptit.ca/ "salut" </p>
                 <pre>Il n'y a pas de page correspondante à l'URL : https://info.cegepmontptit.ca/
 Merci de fournir une URL correspondant à une page.</pre>
 
@@ -137,6 +140,7 @@ Merci de fournir une URL correspondant à une page.</pre>
                     <span class="label label-success">1 point</span> Si l'argument URL est correct, il faut s'assurer
                     que la liste de mots clés est correcte. Nous validons qu'elle ne contient pas de répétitions.
                 </p>
+				<p> <b>Exemple</b> - Arguments : https://info.cegepmontpetit.ca/ "pipo aaa pipo" </p>
                 <pre>Mots clés fournis incorrects "pipo aaa pipo".
 Merci de ne pas avoir de répétitions dans les mots clés : pipo</pre>
             </div>
@@ -146,22 +150,29 @@ Merci de ne pas avoir de répétitions dans les mots clés : pipo</pre>
                 <p>
                     <span class="label label-success">1 point</span> Si les arguments sont corrects, il faut alors
                     commencer l'exploration de la première page. Tu dois afficher dans la console le titre
-                    (<em>title</em>) de la page et l'URL complète. Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi"
-                </p>
+                    (<em>title</em>) de la page et l'URL complète.</p>
+				<p> <b>Exemple</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo popi" </p>
                 <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
 Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4</pre>
                 <p>
                     <span class="label label-success">1 point</span> L'exploration devrait continuer en explorant
-                    le premier lien de chaque page. L'exploration s'arrête si une page de contient aucun lien.
+                    le premier lien de chaque page. L'exploration s'arrête si une page ne contient aucun lien.
                 </p>
-                Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/ "plop"
-                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/
-Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/   liens 4
-Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
-Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+                <p> <b>Exemple</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/index.html "allo" </p>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/index.html
 Titre : Pic et Pic                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/index.html   liens 2
-Titre : La page 5                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html   liens 0
-L'exploration s'est arrêté, la page https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html ne contient aucun lien valide.
+Titre : La page 5                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html
+L'exploration s'est arrêtée, la page https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html ne contient aucun lien valide.
+</pre>
+<p>
+                    <span class="label label-success">1 point</span> L'exploration ignore un lien s'il n'est pas valide
+                </p>
+                <p> <b>Exemple</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/2.html "allo" </p>
+                <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/2.html
+Titre : Pic et Pic                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/2.html   liens 4
+<span style="color:red">URL ignorée : htt://www.google.ca////index.html </span>
+Titre : La page 5                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html
+L'exploration s'est arrêtée, la page https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html ne contient aucun lien valide.
 </pre>
 
 
@@ -172,26 +183,44 @@ L'exploration s'est arrêté, la page https://info.cegepmontpetit.ca/3N5-Prog3/z
                 </p>
                 <ul>
                     <li>Si le premier lien d'une page a une URL qui contient un des mots
-                        clés passés en argument, on veut sauter ce lien est passer au suivant jusqu'à trouver un lien ne
+                        clés passés en argument, on veut sauter ce lien et passer au suivant jusqu'à trouver un lien ne
                         contenant aucun des mots clés.</li>
+				</ul>
+				<p> <b>Exemple</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "testbot" </p>
+				<pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
+Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
+Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
+Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4 
+Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+...</pre>
+				<ul>
                     <li>Si l'URL pointe vers la page actuelle (URL interne), on devrait ignorer le lien et passer au suivant</li>
                 </ul>
-                Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "pipo aaa"
-                </p>
+                <p> <b>Exemple</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "testbot" </p>
                 <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
 Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
 Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
 Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+Titre : Pic et Pic                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/index.html   liens 2
+Titre : La page 5                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html
+L'exploration s'est arrêtée, la page https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html ne contient aucun lien valide.
+</pre>
+<p> <b>Exemple complet</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "testbot 5" </p>
+<pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
 Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
 Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
-Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4 ...</pre>
-
-
+Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+Titre : Pic et Pic                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/index.html   liens 2
+Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
+Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
+...
+</pre>
 
                 <p>
                     <span class="label label-success">1 point</span> Afin d'éviter des boucles infinies, l'exploration doit s'arrêter
                     si le programme rencontre une URL déjà explorée. Il faut afficher un message significatif.
-                    Par exemple pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "aaa pipo"
+                    <p> <b>Exemple</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "testbot aaa" </p>
                 </p>
                 <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
 Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
