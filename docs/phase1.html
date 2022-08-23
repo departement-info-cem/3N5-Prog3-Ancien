@@ -205,7 +205,7 @@ Titre : Pic et Pic                          URL : https://info.cegepmontpetit.ca
 Titre : La page 5                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html
 L'exploration s'est arrêtée, la page https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/aaa/5.html ne contient aucun lien valide.
 </pre>
-<p> <b>Exemple complet</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "testbot 5" </p>
+<p> <b>Exemple complet</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "testbot page5" </p>
 <pre>Les arguments sont corrects, nous commençons l'exploration de https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html
 Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
 Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
@@ -225,6 +225,7 @@ Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-
 Titre : Am                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html   liens 4
 Titre : Stram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/1.html   liens 2
 Titre : Gram                          URL : https://info.cegepmontpetit.ca/3N5-Prog3/z/sub/3.html   liens 4
+<span style="color:red">URL ignorée : https://www.google.www/index.html </span>
 L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html</pre>
 
 
@@ -236,7 +237,7 @@ L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée
                 </p>
                 <p>
                     <span class="label label-success">1 point</span>
-                    Chaque apparition d'une adresse courriel dans le contenu d'une page doit être remplacé par
+                    Chaque apparition d'une adresse courriel dans le contenu d'une page doit être remplacée par
                     <em>prenom.nom@pipo.org</em> avant l'écriture sur le disque.
                 </p>
                 <p>
@@ -251,8 +252,8 @@ L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée
                 <h4>Collecte des courriels</h4>
                 <p>
                     <span class="label label-success">1 point</span>
-                    Le programme collecte les adresses courriels contenues dans chaque page pendant l'exploration.
-                    L'application doit sauver la liste des courriels passées en minuscules dans un fichier
+                    Le programme collecte les adresses courriels valides contenues dans chaque page pendant l'exploration.
+                    L'application doit sauvegarder la liste des courriels en minuscule dans un fichier
                     <em>dossier_du_projet</em>/resultat/courriels.txt
                 </p>
                 <p>
@@ -261,7 +262,7 @@ L'exploration s'est arrêtée car nous avons rencontré une URL déjà explorée
                     alphabétique. Si un courriel a été trouvé plusieurs fois dans l'exploration, tu dois supprimer
                     les doublons.
                 </p>
-                Par exemple, pour https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html sans mot clé exclus:
+				<p> <b>Exemple</b> - Arguments : https://info.cegepmontpetit.ca/3N5-Prog3/z/index.html "testbot" </p>
                 <pre>amon.ra@egypt.com
 biloubilou@microsoft.com
 bob.gilford@patatoes.com
