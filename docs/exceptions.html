@@ -117,7 +117,7 @@
 					</p>
 					<ul>
 						<li>un tableau de String (String[]): la tableau dans lequel on cherche</li>
-						<li>un String: l'élément qu'on cherch</li>
+						<li>un String: l'élément qu'on cherche</li>
 					</ul>
 					<p>
 						La méthode doit avoir le comportement suivant:
@@ -134,6 +134,113 @@
 						un appel normal (oû on trouve l'élément) et un appel exceptionnel (qui lance l'exception).
 					</p>
 				</div>
+				<div>
+					<h3>Exercice Bon ✔️ ou Non ❌</h3>
+					<p> Voici des situations. Dites si le code est bon, ou pas, et pourquoi en 1 ligne </p>
+					<h4> Exemple 1 </h4>
+<pre>
+<code>
+public void uneFonction(){
+	try {
+		//du code…
+	} catch (Exception e){
+		System.out.println("Erreur : " + e);
+	} catch (ArrayOutOfBoundsException a){
+		System.out.println("Erreur : " + a);
+	}
+}
+</code>
+</pre>
+					<h4> Exemple 2 </h4>
+<pre>
+<code>				
+public void calculerPoidsSupernova() {
+	try {
+		//calculs compliqués...
+	} catch (NumberFormatException e) {}
+}
+</code>
+</pre>
+				</div>	
+				<div>
+					<h3>Exercice Attrape 🎣 ou Transmet 📡 ?</h3>
+					<p> Voici des situations. Dites si on devrait attraper (<b>catch</b>) ou transmettre (<b>throws</b>) et pourquoi</p>
+					<h4> Exemple 1 </h4>
+					<pre>
+<code>public static void main() {
+	try {
+		calcul();
+		lireFichier();
+	} catch (ArithmeticException a) {
+		println("Problème dans les valeurs du calcul");
+	} catch (IllegalArgumentException i ) {
+		println("Problème dans les paramètres du programme");		
+	} catch (InterruptedException t){
+		println("Problème avec le thread en cours");	
+	}
+}
+
+public static void lireFichier(){
+	// Code qui lit un fichier...
+<span>	// Q : Catch ou Throws?</span>
+}
+</code>
+</pre>
+<h4> Exemple 2 </h4>
+					<pre>
+<code>public static void main( String[] args ){
+	List&lt;Integer&gt; myList = Arrays.asList(1, 2, 3, 4, 5);
+	List&lt;List&lt;Integer&gt; &gt; lists = Lists.partition(myList, -1);
+			
+	// Ce code utilise la librairie Guava.
+	//<span> Q : Catch ou Throws?</span>
+}
+</code>
+</pre>
+<h4> Exemple 3 </h4>
+<pre>
+<code>public void uneFonction(){
+	etape1();
+	etape2();
+	etape3();
+	etape4();
+	etape5();
+}
+
+public void etape3(){
+	//Code qui génère une exception
+	<span>// Q : Catch ou Throws?</span>
+}
+</code>
+</pre>
+				</div>
+				<div>
+					<h3>Exercice Jimmy et Johnny 👨‍🎤👨‍💼</h3>
+					<p>Jimmy et Johnny se chicanent depuis 10 ans. Chacun a écrit une méthode afin de lire un fichier. Jimmy dit que les deux méthodes sont équivalentes alors que Johnny dit que le résultat n'est pas le même. Qui a raison et pourquoi? </p>
+					<p>Testez le code pour démontrer si les méthodes sont pareilles ou non. </p>
+					<pre>
+<code>
+    public static void lireDesFichiersJimmy(){
+        for (int i = 0 ; i < 10 ; i++ ){
+            try {
+                lireFichier(i); 
+            } catch (FileNotFoundException e) {
+                System.out.println("fichier n'existe pas");
+            }
+        }
+    }
+
+    public static void lireDesFichiersJohnny(){
+        try {
+            for (int i = 0 ; i < 10 ; i++ ){
+                lireFichier(i); 
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("fichier n'existe pas");
+        }
+    }	
+</code>
+</pre>	
 			</div>
 		</div>
 	</div>

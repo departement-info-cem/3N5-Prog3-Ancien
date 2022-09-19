@@ -1,29 +1,24 @@
 package sabourin.compute;
 
-import sabourin.exceptions.MonThrowable;
-
+import sabourin.exceptions.MonException;
 import java.io.*;
 import java.text.ParseException;
 
-//catch an exception only if you can handle it in a meaningful way
-//declare throwing the exception upward if it is to be handled by the consumer of the current method
-//throw sabourin.exceptions if they are caused by the input parameters (but these are more often unchecked)
 
 public class Computor {
-    public Computor() throws ParseException, MonThrowable {
-        //divide(5,0);
-        //show(5);
-        //showTryCatch(5);
-        //plusieursTryCatch();
-        //plusieursTryCatchJava7(null);
-
-        //writeFile();
-
-        //throwLots(-5, "yo");
-        //throwLots(6000,"3000");
-
-        throwMonException();
+    // TODO 3 On peut aussi créer nos propres   ⬇ ⬇ ⬇ ⬇ ⬇  classes d'exception
+    public Computor() throws ParseException, MonException {
+        // TODO 4 Décommenter une seule ligne à la fois et exécuter chaque fois
+//        divide(5,0);
+//        arrayAccess(5);
+//        arrayAccessCaught(5);
+//        plusieursTryCatch();
+//        writeFile();
+//        validate(-5, "yo");
+//        validate(6000,"3000");
     }
+
+    //region UNCHECKED EXCEPTIONS
 
     //unchecked --> runtime
     public int divide(int number, int divisor) {
@@ -31,12 +26,12 @@ public class Computor {
     }
 
     //unchecked --> runtime
-    public void show(int pos) {
+    public void arrayAccess(int pos) {
         int[] num = {1, 2, 3, 4};
         System.out.println(num[pos]);
     }
 
-    public void showTryCatch(int pos) {
+    public void arrayAccessCaught(int pos) {
         int[] num = {1, 2, 3, 4};
         try {
             System.out.println(num[pos]);
@@ -45,12 +40,16 @@ public class Computor {
         }
     }
 
-    //checked --> exception (pas runtime exception)
+    //endregion
+    //region CHECKED EXCEPTIONS
+    //checked --> pre-runtime
     public void writeFile() throws FileNotFoundException {
         File file = new File("E://file.txt");
         FileReader fr = new FileReader(file);
     }
 
+    //endregion
+    //region IMBRICATED TRY CATCH
     public void plusieursTryCatch() {
         //main try-block
         try {
@@ -80,32 +79,11 @@ public class Computor {
         }
     }
 
-    public void plusieursTryCatchJava7(String test2) {
-        try {
-            int[] tab = new int[]{0};
-            int[] tab2;
-            int test1 = tab[1];
-
-            test2.startsWith("allo");
-
-
-        } catch (NullPointerException | ArrayIndexOutOfBoundsException | ArithmeticException ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    public void throwLots(int number, String texte) throws ParseException, MonThrowable {
-        if (number < 0) throw new MonThrowable("CHIFFRE NÉGATIF");
+    //endregion
+    //region THROW
+    public void validate(int number, String texte) throws ParseException, MonException {
+        if (number < 0) throw new MonException("CHIFFRE NÉGATIF");
         if (texte.equals("3000")) throw new ParseException("bla", 0);
-
-        // Pas besoin d'ajouter IllegalArgumentException à la signature  https://stackoverflow.com/questions/5304098/should-i-put-throws-illegalargumentexception-at-the-function
     }
-
-    public void throwMonException() throws MonThrowable {
-        try {
-            throw new MonThrowable("Pas cool");
-        }catch (MonThrowable e){
-            System.out.println(e.getMessage());
-        }
-    }
+    //endregion
 }
