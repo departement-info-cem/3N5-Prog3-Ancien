@@ -1,7 +1,5 @@
 package org.sabourin.service;
 
-import androidx.room.Room;
-
 import org.sabourin.bd.BD;
 import org.sabourin.exceptions.MauvaiseQuestion;
 import org.sabourin.modele.VDQuestion;
@@ -11,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ServiceImplementation{
+public class Service {
 
     private BD maBD;
 
-    public ServiceImplementation (BD maBD){
+    public Service(BD maBD){
         this.maBD = maBD;
     }
 

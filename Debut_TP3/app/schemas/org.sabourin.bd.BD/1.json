@@ -1,0 +1,40 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "554ed29dbcd5550e37539c4c134291e5",
+    "entities": [
+      {
+        "tableName": "VDQuestion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idQuestion` INTEGER PRIMARY KEY AUTOINCREMENT, `texteQuestion` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "idQuestion",
+            "columnName": "idQuestion",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "texteQuestion",
+            "columnName": "texteQuestion",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idQuestion"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '554ed29dbcd5550e37539c4c134291e5')"
+    ]
+  }
+}

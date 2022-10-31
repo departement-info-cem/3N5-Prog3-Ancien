@@ -4,36 +4,29 @@ import android.content.Context;
 
 import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
-import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.sabourin.bd.BD;
-import org.sabourin.bd.MonDao;
 import org.sabourin.exceptions.MauvaiseQuestion;
 import org.sabourin.modele.VDQuestion;
-import org.sabourin.service.ServiceImplementation;
-
-import java.io.IOException;
-
-import static org.junit.Assert.*;
+import org.sabourin.service.Service;
 
 @RunWith(AndroidJUnit4.class)
-public class TestsApplication {
+public class TestsService {
 
     private BD bd;
-    private ServiceImplementation service;
+    private Service service;
 
     // S'exécute avant chacun des tests. Crée une BD en mémoire
     @Before
     public void createDb() {
         Context context = ApplicationProvider.getApplicationContext();
         bd = Room.inMemoryDatabaseBuilder(context, BD.class).build();
-        service = new ServiceImplementation(bd);
+        service = new Service(bd);
     }
 
 

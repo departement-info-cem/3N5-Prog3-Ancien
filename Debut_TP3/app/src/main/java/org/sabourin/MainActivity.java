@@ -9,10 +9,10 @@ import android.util.Log;
 import org.sabourin.bd.BD;
 import org.sabourin.exceptions.MauvaiseQuestion;
 import org.sabourin.modele.VDQuestion;
-import org.sabourin.service.ServiceImplementation;
+import org.sabourin.service.Service;
 
 public class MainActivity extends AppCompatActivity {
-    private ServiceImplementation service;
+    private Service service;
     private BD maBD;
 
     @Override
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .fallbackToDestructiveMigration()
                 .build();
-        service = new ServiceImplementation(maBD);
+        service = new Service(maBD);
         creerQuestion();
     }
 
