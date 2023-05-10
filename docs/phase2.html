@@ -1,195 +1,249 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="page du cours professions informatiques">
-    <meta name="author" content="Département informatique, collège Édouard Montpetit">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="page du cours professions informatiques"
+    />
+    <meta
+      name="author"
+      content="Département informatique, collège Édouard Montpetit"
+    />
 
     <title>Travail 2</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
     <style>
-        body {
-            padding-top: 70px;
-        }
+      body {
+        padding-top: 70px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-<!-- Fixed navbar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Travail 2 : <strong>Interface graphique Android</strong></a>
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"
+            >Travail 2 : <strong>Interface graphique Android</strong></a
+          >
         </div>
         <div class="navbar-collapse collapse navbar-right">
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">Accueil</a></li>
-            </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Accueil</a></li>
+          </ul>
         </div>
         <!--/.nav-collapse -->
-    </div>
-</div>
-
-<div class="container">
-    <div class="row mb-3 well">
-        <div class="col-xs-6 ">
-            <h3>Git et suivi du code</h3>
-            <div>
-                <span class="label label-success">1 point</span> Le nom du repo est <em>AXX-4203N5-VotoDroid-Dupont</em> (remplace Dupont par ton nom de famille) sur github. (Instructions : <b><a href="https://departement-info-cem.github.io/git">ici</a></b> & <b><a href="introduction.html">ici</a></b> ) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
-            </div>
-            <div>
-                <span class="label label-success">1 point</span> Un minimum de 8 commits de tailles comparables (il n'y a pas un commit avec tout dedans et les autres vides) décrivant l'avancement du projet dans un français correct (passe Word).
-            </div>
-        </div>
-        <div class="col-xs-6 ">
-            <h3>But du travail</h3>
-            <p>
-                Ce TP se concentre sur l'interface graphique, les ajouts ne fonctionnent pas, la liste est toujours la même,
-                on voit toujours la même question quand on en sélectionne une.
-            </p>
-            <p>
-                Le but est de mettre en place les objets graphiques, pas de gérer les données.
-                Vous ne devez pas valider les données non plus, ni afficher de messages d'erreur.
-            </p>
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-xs-6 ">
-            <h3>Activité d'accueil</h3>
-            <h4>Mise en page</h4>
-            <p>
-                <span class="label label-success">1 point</span> La mise en page respecte l'image suivante (cliquez pour élargir)
-            </p>
-            <h4>Bouton Ajouter</h4>
-            <p>
-                <span class="label label-success">1 point</span> Le bouton fonctionne. Ajouter doit amener à l'activité de création d'une question.
-            </p>
-			<h4>Menu</h4>
-            <p>
-                <span class="label label-success">1 point</span> Le menu affiche les deux choix suivants quand on clique dessus : "Supprimer toutes les questions" et "Supprimer tous les votes".
-            </p>
-        </div>
-
-        <div class="col-xs-3 ">
-            <a href="img/phase3-accueil.png"><img src="img/phase3-accueil.png" style="width:100%"/></a>
-        </div>
-		<div class="col-xs-3 ">
-            <a href="img/phase2-menu.png"><img src="img/phase2-menu.png" style="width:100%"/></a>
-        </div>
-
-    </div>
-    <div class="row well">
-        <div class="col-xs-6 ">
-            <h3>Création d'une question</h3>
-            <h4>Mise en page</h4>
-            <p>
-                <span class="label label-success">1 point</span> La mise en page respecte l'image suivante (cliquez pour élargir)
-            </p>
-            <h4>Fonctionnement correct</h4>
-            <p>
-                <span class="label label-success">1 point</span> On retourne à l'accueil quand on appuie sur le bouton.
-            </p>
-        </div>
-        <div class="col-xs-3 ">
-            <a href="img/phase3-ajout.png"><img src="img/phase3-ajout.png" style="width:100%"/></a>
-        </div>
-        <div class="col-xs-3 ">
-            <a href="img/phase3-ajout-complet.png"><img src="img/phase3-ajout-complet.png" style="width:100%"/></a>
-        </div>
+      </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-9 ">
-            <h3>Liste des questions</h3>
-            <h4>Mise en page</h4>
-            <p>
-                <span class="label label-success">1 point</span> La mise en page de chaque élément de la liste respecte l'image suivante (cliquez pour élargir).
-                Vous devez coder la liste visuelle en utilisant un RecyclerView
-            </p>
-            <p>
-                <span class="label label-success">1 point</span> Vous travaillerez sur une liste codée en dur d'au moins 20 questions
-            </p>
-            <h4>Comportement</h4>
-            <p>
-                <span class="label label-success">2 points</span> Un appui sur le bouton avec l'icône amène aux résultats. Un appui sur tout autre endroit de la ligne amène à l'écran de vote.
-            </p>
-        </div>
-        <div class="col-xs-3 well">
-            <a href="img/phase3-liste.png"><img src="img/phase3-liste.png" style="width:100%"/></a>
-        </div>
-    </div>
-    <div class="row well">
+    <div class="container">
+      <div class="row mb-3 well">
         <div class="col-xs-6">
-            <h4>Écran de vote</h4>
-            <p>
-                <span class="label label-success">1 point</span>
-                La mise en page doit correspondre avec un moyen d'enregistrer
-                une note entre 0 et 5 inclus et un champ pour entrer le nom du votant.
-            </p>
-            <p>
-                <span class="label label-success">1 point</span>
-                On retourne à l'écran de liste quand on appuie sur "Vote".
-            </p>
+          <h3>Git et suivi du code</h3>
+          <div>
+            Le repo sur lequel tu travailleras te sera fourni par ton enseignant
+            avec GitHub Classroom.
+          </div>
+          <div>
+            <span class="label label-success">1 point</span> Un minimum de 8
+            commits de tailles comparables (il n'y a pas un commit avec tout
+            dedans et les autres vides) décrivant l'avancement du projet dans un
+            français correct (passe Word).
+            Ces points sont conditionnés à la remise d'au moins un commit par semaine de cours.
+          </div>
         </div>
-        <div class="col-xs-3 well">
-            <a href="img/phase3-vote.png"><img src="img/phase3-vote.png" style="width:100%;"/></a>
+        <div class="col-xs-6">
+          <h3>But du travail</h3>
+          <p>
+            Ce TP se concentre sur l'interface graphique, les ajouts ne
+            fonctionnent pas, la liste est toujours la même, on voit toujours la
+            même question quand on en sélectionne une.
+          </p>
+          <p>
+            Le but est de mettre en place les objets graphiques, pas de gérer
+            les données. Vous ne devez pas valider les données non plus, ni
+            afficher de messages d'erreur.
+          </p>
         </div>
-        <div class="col-xs-3 well">
-            <a href="img/phase3-vote-complet.png"><img src="img/phase3-vote-complet.png" style="width:100%;"/></a>
+      </div>
+      <div class="row mb-3">
+        <div class="col-xs-6">
+          <h3>Activité d'accueil</h3>
+          <h4>Mise en page</h4>
+          <p>
+            <span class="label label-success">1 point</span> La mise en page
+            respecte l'image suivante (cliquez pour élargir)
+          </p>
+          <h4>Bouton Ajouter</h4>
+          <p>
+            <span class="label label-success">1 point</span> Le bouton
+            fonctionne. Ajouter doit amener à l'activité de création d'une
+            question.
+          </p>
+          <h4>Menu</h4>
+          <p>
+            <span class="label label-success">1 point</span> Le menu affiche les
+            deux choix suivants quand on clique dessus : "Supprimer toutes les
+            questions" et "Supprimer tous les votes".
+          </p>
         </div>
-    </div>
 
-    <div class="row">
+        <div class="col-xs-3">
+          <a href="img/phase3-accueil.png"
+            ><img src="img/phase3-accueil.png" style="width: 100%"
+          /></a>
+        </div>
+        <div class="col-xs-3">
+          <a href="img/phase2-menu.png"
+            ><img src="img/phase2-menu.png" style="width: 100%"
+          /></a>
+        </div>
+      </div>
+      <div class="row well">
+        <div class="col-xs-6">
+          <h3>Création d'une question</h3>
+          <h4>Mise en page</h4>
+          <p>
+            <span class="label label-success">1 point</span> La mise en page
+            respecte l'image suivante (cliquez pour élargir)
+          </p>
+          <h4>Fonctionnement correct</h4>
+          <p>
+            <span class="label label-success">1 point</span> On retourne à
+            l'accueil quand on appuie sur le bouton.
+          </p>
+        </div>
+        <div class="col-xs-3">
+          <a href="img/phase3-ajout.png"
+            ><img src="img/phase3-ajout.png" style="width: 100%"
+          /></a>
+        </div>
+        <div class="col-xs-3">
+          <a href="img/phase3-ajout-complet.png"
+            ><img src="img/phase3-ajout-complet.png" style="width: 100%"
+          /></a>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col-xs-9">
-            <h4>Écran de résultats</h4>
-            <p>
-                <span class="label label-success">1 point</span>
-                La mise en page correspond et permet d'afficher la moyenne, l'écart type.
-            </p>
-            <p>
-                <span class="label label-success">2 points</span>
-                Le graphique permet d'afficher la distribution des notes.
-            </p>
+          <h3>Liste des questions</h3>
+          <h4>Mise en page</h4>
+          <p>
+            <span class="label label-success">1 point</span> La mise en page de
+            chaque élément de la liste respecte l'image suivante (cliquez pour
+            élargir). Vous devez coder la liste visuelle en utilisant un
+            RecyclerView
+          </p>
+          <p>
+            <span class="label label-success">1 point</span> Vous travaillerez
+            sur une liste codée en dur d'au moins 20 questions
+          </p>
+          <h4>Comportement</h4>
+          <p>
+            <span class="label label-success">2 points</span> Un appui sur le
+            bouton avec l'icône amène aux résultats. Un appui sur tout autre
+            endroit de la ligne amène à l'écran de vote.
+          </p>
         </div>
         <div class="col-xs-3 well">
-            <a href="img/phase3-resultats.png"><img src="img/phase3-resultats.png" style="width:100%;"/></a>
+          <a href="img/phase3-liste.png"
+            ><img src="img/phase3-liste.png" style="width: 100%"
+          /></a>
         </div>
+      </div>
+      <div class="row well">
+        <div class="col-xs-6">
+          <h4>Écran de vote</h4>
+          <p>
+            <span class="label label-success">1 point</span>
+            La mise en page doit correspondre avec un moyen d'enregistrer une
+            note entre 0 et 5 inclus et un champ pour entrer le nom du votant.
+          </p>
+          <p>
+            <span class="label label-success">1 point</span>
+            On retourne à l'écran de liste quand on appuie sur "Vote".
+          </p>
+        </div>
+        <div class="col-xs-3 well">
+          <a href="img/phase3-vote.png"
+            ><img src="img/phase3-vote.png" style="width: 100%"
+          /></a>
+        </div>
+        <div class="col-xs-3 well">
+          <a href="img/phase3-vote-complet.png"
+            ><img src="img/phase3-vote-complet.png" style="width: 100%"
+          /></a>
+        </div>
+      </div>
 
-    </div>
+      <div class="row">
+        <div class="col-xs-9">
+          <h4>Écran de résultats</h4>
+          <p>
+            <span class="label label-success">1 point</span>
+            La mise en page correspond et permet d'afficher la moyenne, l'écart
+            type.
+          </p>
+          <p>
+            <span class="label label-success">2 points</span>
+            Le graphique permet d'afficher la distribution des notes.
+          </p>
+        </div>
+        <div class="col-xs-3 well">
+          <a href="img/phase3-resultats.png"
+            ><img src="img/phase3-resultats.png" style="width: 100%"
+          /></a>
+        </div>
+      </div>
 
-    <div class="row">
+      <div class="row">
         <div class="">
-            <h3>Fonctionnement global</h3>
-            <p>
-                <span class="label label-danger">3 points négatifs</span>
-                Fonctionnement correct et sans plantage. Ce pointage fonctionne en
-                négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note.
-                Dans le cas contraire, vous perdez des points avec un maximum de 5.
-            </p>
-            <ul>
-                <li>plantage de l'application -1 point</li>
-                <li>interface illisible -1 point</li>
-                <li>information affichée incohérente -1 point</li>
-                <li>autre cas ...</li>
-            </ul>
-
+          <h3>Fonctionnement global</h3>
+          <p>
+            <span class="label label-danger">3 points négatifs</span>
+            Fonctionnement correct et sans plantage. Ce pointage fonctionne en
+            négatif. Si l'application fonctionne correctement en tout temps,
+            vous conservez votre note. Dans le cas contraire, vous perdez des
+            points avec un maximum de 5.
+          </p>
+          <ul>
+            <li>plantage de l'application -1 point</li>
+            <li>interface illisible -1 point</li>
+            <li>information affichée incohérente -1 point</li>
+            <li>autre cas ...</li>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

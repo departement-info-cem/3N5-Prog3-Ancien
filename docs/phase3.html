@@ -1,202 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="page du cours professions informatiques">
-    <meta name="author" content="Département informatique, collège Édouard Montpetit">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="page du cours professions informatiques"
+    />
+    <meta
+      name="author"
+      content="Département informatique, collège Édouard Montpetit"
+    />
 
     <title>Projet phase 3</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
     <style>
-        body {
-            padding-top: 70px;
-        }
+      body {
+        padding-top: 70px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Travail 3 : <strong>Appli Android</strong></a>
-            </div>
-            <div class="navbar-collapse collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Accueil</a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"
+            >Travail 3 : <strong>Appli Android</strong></a
+          >
         </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Accueil</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
     </div>
 
     <div class="container">
-        <div class="row mb-3">
-            <div class="col-xs-6 ">
-                <h3>Git et suivi du code</h3>
-                <div>
-                    Le nom du repo est <em>AXX-4203N5-VotoDroid-Dupont</em>.
-                    Il s'agit du même repo que pour le TP2.
-                </div>
-                <div>
-                    <span class="label label-success">3 points</span>
-                    Un minimum de 5 commits de tailles comparables (il n'y a pas un commit avec tout dedans et les autres vides)
-                    décrivant l'avancement du projet dans un français correct (passe Word).
-                </div>
-            </div>
-            <div class="col-xs-6 ">
-                <h3>Projet fourni</h3>
-                <h4>Code fourni</h4>
-                <p>
-                    Un projet Android est fourni avec le squelette du service, du DAO et des tests. Par ailleurs,
-                    pour servir d'exemple, la méthode de DAO, la méthode de service ainsi que les tests sont fournis
-                    pour la création d'une question.
-                    <a href="https://github.com/departement-info-cem/3N5-Prog3/tree/master/code/Debut_TP3" class="btn btn-primary">ici</a>.
-                </p>
-                <h4>Fusion des projets</h4>
-                <p>
-                    Vous devez combiner ce projet avec votre projet du TP2. Vous remettrez un unique projet Android.
-                </p>
-            </div>
-
+      <div class="row mb-3">
+        <div class="col-xs-6">
+          <h3>Git et suivi du code</h3>
+          <div>
+            Tu dois continuer à travailler sur le repo du TP2.
+          </div>
+          <div>
+            <span class="label label-success">3 points</span>
+            Un minimum de 5 commits de tailles comparables (il n'y a pas un
+            commit avec tout dedans et les autres vides) décrivant l'avancement
+            du projet dans un français correct (passe Word).
+            Ces points sont conditionnés à la remise d'au moins un commit par semaine de cours.
+          </div>
         </div>
-        <div class="row mb-3">
-
-            <div class="col-xs-6 ">
-                <h3>Création d'une question</h3>
-                <p>
-                    Le code ainsi que les tests pour la création d'une question sont fournis.
-                    Vous devez intégrer la création d'une question dans l'interface graphique.
-                </p>
-                <p>
-                    <span class="label label-success">1 point</span>
-                    Une question est créée dans l'écran de création en utilisant le contenu du champ texte.
-                </p>
-                <p>
-                    <span class="label label-success">1 point</span>
-                    Un message indiquant la raison de l'erreur est affiché si la création échoue ("question vide", "question trop courte", "question existante").
-                </p>
-            </div>
-
-            <div class="col-xs-6 ">
-                <h3>Affichage de la liste des questions</h3>
-                <p>
-                    <span class="label label-primary">1 point</span> Vous devez programmer le code de BD renvoyant la liste des questions.
-                </p>
-                <p>
-                    <span class="label label-primary">1 point</span> Au niveau service, vous devez vous assurez de renvoyer la liste triée par nombre de votes descendant.
-                </p>
-                <p>
-                    <span class="label label-warning">1 point</span>
-                    Vous devez écrire les tests pour votre méthode de service.
-                </p>
-                <p>
-                    <span class="label label-success">2 points</span>
-                    Vous devez intégrer la liste dans l'écran d'accueil de l'application.
-                </p>
-            </div>
-
-            <div class="col-xs-6 ">
-                <h3>Ajout d'un vote</h3>
-                <p>
-                    <span class="label label-primary">1 point</span> Vous devez programmer le code de BD afin d'ajouter un vote rattaché à une question.
-                </p>
-                <p>
-                    <span class="label label-primary">2 points</span>
-                    Au niveau service, vous devez vous assurez qu'il n'y a pas de vote existant pour cette question et
-                    cette personne. Assurez-vous de lancer une exception significative si c'est le cas.
-                    Vous devez également vous assurer que le nom du votant fait au minimum 4 caractères imprimables (pas des espaces).
-                </p>
-                <p>
-                    <span class="label label-warning">1 point</span>
-                    Vous devez écrire les tests pour votre méthode de service.
-                </p>
-                <p>
-                    <span class="label label-success">1 point</span>
-                    Vous devez intégrer l'ajout d'un vote dans l'écran correspondant de l'interface graphique. Si le vote
-                    est créé avec succès, l'application doit revenir à l'écran d'accueil.
-                </p>
-                <p>
-                    <span class="label label-success">1 point</span>
-                    Vous devez fournir un message significatif en cas d'erreur (déjà voté ou nom trop court ou vide).
-                </p>
-            </div>
-
-            <div class="col-xs-6 ">
-                <h3>Ecran de résultats</h3>
-                <p>
-                    <span class="label label-primary">1 point</span>
-                    Vous devez coder une méthode de BD permettant d'accéder à tous les votes pour une question donnée en paramètre.
-                </p>
-                <p>
-                    <span class="label label-primary">1 point</span>
-                    Niveau service, vous devez programmer les différentes méthodes pour la moyenne et la distribution.
-                </p>
-                <p>
-                    <span class="label label-warning">2 points</span>
-                    Vous devez écrire les tests pour vos méthodes de service.
-                </p>
-                <p>
-                    <span class="label label-success">3 points</span>
-                    Vous devez intégrer les appels dans l'écran de résultats.
-                </p>
-            </div>
-
-            <div class="col-xs-6 ">
-                <h3>Menu de développement</h3>
-                <p>
-                    Pour faciliter le développement de l'application, nous vous demandons d'inclure 2 options pour supprimer les votes
-                    et pour supprimer les questions.
-                </p>
-                <p>
-                    <span class="label label-primary">1 point</span>
-                    Vous devez coder les méthodes de suppression nécessaire dans la BD.
-                </p>
-                <p>
-                    <span class="label label-warning">1 point</span>
-                    Vous devez écrire les tests pour vos méthodes de service.
-                </p>
-                <p>
-                    <span class="label label-success">1 point</span>
-                    Vous devez intégrer les 2 options dans le menu dans l'activité d'accueil.
-                </p>
-                <p>
-                    <span class="label label-success">1 point</span> L'interface doit se mettre à jour. L'ordre est mis à jour si on supprime les votes,
-                    la liste à l'écran est vidée si on supprime les questions.
-                </p>
-            </div>
+        <div class="col-xs-6">
+          <h3>Projet fourni</h3>
+          <h4>Code fourni</h4>
+          <p>
+            Un projet Android est fourni avec le squelette du service, du DAO et
+            des tests. Par ailleurs, pour servir d'exemple, la méthode de DAO,
+            la méthode de service ainsi que les tests sont fournis pour la
+            création d'une question.
+            <a
+              href="https://github.com/departement-info-cem/3N5-Prog3/tree/master/code/Debut_TP3"
+              class="btn btn-primary"
+              >ici</a
+            >.
+          </p>
+          <h4>Fusion des projets</h4>
+          <p>
+            Vous devez combiner ce projet avec votre projet du TP2. Vous
+            remettrez un unique projet Android.
+          </p>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-xs-6">
+          <h3>Création d'une question</h3>
+          <p>
+            Le code ainsi que les tests pour la création d'une question sont
+            fournis. Vous devez intégrer la création d'une question dans
+            l'interface graphique.
+          </p>
+          <p>
+            <span class="label label-success">1 point</span>
+            Une question est créée dans l'écran de création en utilisant le
+            contenu du champ texte.
+          </p>
+          <p>
+            <span class="label label-success">1 point</span>
+            Un message indiquant la raison de l'erreur est affiché si la
+            création échoue ("question vide", "question trop courte", "question
+            existante").
+          </p>
         </div>
 
-        <div class="row">
-            <h3>Fonctionnement global</h3>
-            <p>
-                <span class="label label-danger">5 points négatifs</span>
-                Fonctionnement correct et sans plantage. Ce pointage fonctionne en
-                négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note.
-                Dans le cas contraire, vous perdez des points avec un maximum de 5.
-            </p>
-            <ul>
-                <li>plantage de l'application -1 point</li>
-                <li>interface illisible -1 point</li>
-                <li>information affichée incohérente -1 point</li>
-                <li>autre cas ...</li>
-            </ul>
+        <div class="col-xs-6">
+          <h3>Affichage de la liste des questions</h3>
+          <p>
+            <span class="label label-primary">1 point</span> Vous devez
+            programmer le code de BD renvoyant la liste des questions.
+          </p>
+          <p>
+            <span class="label label-primary">1 point</span> Au niveau service,
+            vous devez vous assurez de renvoyer la liste triée par nombre de
+            votes descendant.
+          </p>
+          <p>
+            <span class="label label-warning">1 point</span>
+            Vous devez écrire les tests pour votre méthode de service.
+          </p>
+          <p>
+            <span class="label label-success">2 points</span>
+            Vous devez intégrer la liste dans l'écran d'accueil de
+            l'application.
+          </p>
         </div>
+
+        <div class="col-xs-6">
+          <h3>Ajout d'un vote</h3>
+          <p>
+            <span class="label label-primary">1 point</span> Vous devez
+            programmer le code de BD afin d'ajouter un vote rattaché à une
+            question.
+          </p>
+          <p>
+            <span class="label label-primary">2 points</span>
+            Au niveau service, vous devez vous assurez qu'il n'y a pas de vote
+            existant pour cette question et cette personne. Assurez-vous de
+            lancer une exception significative si c'est le cas. Vous devez
+            également vous assurer que le nom du votant fait au minimum 4
+            caractères imprimables (pas des espaces).
+          </p>
+          <p>
+            <span class="label label-warning">1 point</span>
+            Vous devez écrire les tests pour votre méthode de service.
+          </p>
+          <p>
+            <span class="label label-success">1 point</span>
+            Vous devez intégrer l'ajout d'un vote dans l'écran correspondant de
+            l'interface graphique. Si le vote est créé avec succès,
+            l'application doit revenir à l'écran d'accueil.
+          </p>
+          <p>
+            <span class="label label-success">1 point</span>
+            Vous devez fournir un message significatif en cas d'erreur (déjà
+            voté ou nom trop court ou vide).
+          </p>
+        </div>
+
+        <div class="col-xs-6">
+          <h3>Ecran de résultats</h3>
+          <p>
+            <span class="label label-primary">1 point</span>
+            Vous devez coder une méthode de BD permettant d'accéder à tous les
+            votes pour une question donnée en paramètre.
+          </p>
+          <p>
+            <span class="label label-primary">1 point</span>
+            Niveau service, vous devez programmer les différentes méthodes pour
+            la moyenne et la distribution.
+          </p>
+          <p>
+            <span class="label label-warning">2 points</span>
+            Vous devez écrire les tests pour vos méthodes de service.
+          </p>
+          <p>
+            <span class="label label-success">3 points</span>
+            Vous devez intégrer les appels dans l'écran de résultats.
+          </p>
+        </div>
+
+        <div class="col-xs-6">
+          <h3>Menu de développement</h3>
+          <p>
+            Pour faciliter le développement de l'application, nous vous
+            demandons d'inclure 2 options pour supprimer les votes et pour
+            supprimer les questions.
+          </p>
+          <p>
+            <span class="label label-primary">1 point</span>
+            Vous devez coder les méthodes de suppression nécessaire dans la BD.
+          </p>
+          <p>
+            <span class="label label-warning">1 point</span>
+            Vous devez écrire les tests pour vos méthodes de service.
+          </p>
+          <p>
+            <span class="label label-success">1 point</span>
+            Vous devez intégrer les 2 options dans le menu dans l'activité
+            d'accueil.
+          </p>
+          <p>
+            <span class="label label-success">1 point</span> L'interface doit se
+            mettre à jour. L'ordre est mis à jour si on supprime les votes, la
+            liste à l'écran est vidée si on supprime les questions.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3>Fonctionnement global</h3>
+        <p>
+          <span class="label label-danger">5 points négatifs</span>
+          Fonctionnement correct et sans plantage. Ce pointage fonctionne en
+          négatif. Si l'application fonctionne correctement en tout temps, vous
+          conservez votre note. Dans le cas contraire, vous perdez des points
+          avec un maximum de 5.
+        </p>
+        <ul>
+          <li>plantage de l'application -1 point</li>
+          <li>interface illisible -1 point</li>
+          <li>information affichée incohérente -1 point</li>
+          <li>autre cas ...</li>
+        </ul>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
